@@ -1,7 +1,6 @@
 # teacher-army
 
-![Johnny Earle - You're In The Army Now](https://www.youtube.com/watch?v=mpmMiZKqBK4)
-
+### You're In The Army Now
 
 A vacation in a foreign land  
 Uncle Sam does the best he can  
