@@ -1,7 +1,6 @@
 # teacher-army
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/mpmMiZKqBK4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
+![Johnny Earle - You're In The Army Now](https://www.youtube.com/watch?v=mpmMiZKqBK4)
 
 
 A vacation in a foreign land  
