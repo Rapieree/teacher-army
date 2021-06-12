@@ -37,19 +37,19 @@ Oh, oh, you're in the army now
 Контакты:
 - Tg: https://t.me/kicumkicum
 - Mail: kicumkicum@gmail.com
-- Issue: https://github.com/kicumkicum/kicumkicum/issues
+- Issue: https://github.com/kicumkicum/teacher-army/issues
 
 Или ты можешь оставить контакты [здесь](https://forms.gle/C43ArKRTtFHFh7XY7) и я сам свяжусь с тобой и расскажу всё подробнее.
 
 ## Немного о нас
 
-### Олег Акинин
-
-Разработчик веб приложений, а сейчас архитектор в [@bss](https://bssys.com/). У меня большой опыт разработки, наставничества и даже преподавания. Я разрабатывал веб-приложения для малопроизводительных платформ в [@interfaced](https://interfaced.tv), [@spbtv](https://ru.spbtv.com), [@okko](https://okko.tv), [@siemens](https://siemens.com) и не понаслышке знаю, что такое оптимизация. Создавал обучающие курсы, читал лекции и менторил в [@htmlacademy](https://htmlacademy.ru) и [@onebootcamp](https://m.facebook.com/onebootcamp/).
-
 ### Евгений Щепотьев
 
 ...
+
+### Олег Акинин
+
+Разработчик веб приложений, а сейчас архитектор в [@bss](https://bssys.com/). У меня большой опыт разработки, наставничества и даже преподавания. Я разрабатывал веб-приложения для малопроизводительных платформ в [@interfaced](https://interfaced.tv), [@spbtv](https://ru.spbtv.com), [@okko](https://okko.tv), [@siemens](https://siemens.com) и не понаслышке знаю, что такое оптимизация. Создавал обучающие курсы, читал лекции и менторил в [@htmlacademy](https://htmlacademy.ru) и [@onebootcamp](https://m.facebook.com/onebootcamp/).
 
 ---
 
