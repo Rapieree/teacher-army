@@ -1,23 +1,5 @@
 # teacher-army
 
-### You're In The Army Now
-
-A vacation in a foreign land  
-Uncle Sam does the best he can  
-You're in the army now  
-Oh, oh, you're in the army nowNow you remember what the draftsman said  
-Nothing to do all day but stay in bed  
-You're in the army now  
-Oh, oh, you're in the army nowYou be the hero of the neighborhood  
-Nobody knows that you left for good  
-You're in the army now  
-Oh, oh, you're in the army nowSmiling faces as you wait to land  
-But once you get there no one gives a damn  
-You're in the army now  
-Oh, oh, you're in the army now  
-
----
-
 ## Наставничество
 
 Если ты начинающий разработчик и у тебя много вопросов, на которые нет ответов, то возможно тебе нужен наставник или ментор. Наставник это человек, который делится своим профессиональным опытом, помогает сфокусироваться и определиться с выбором технологий, понять что важно, а что можно пропустить. И даже как качать скилы максимально эффективно, побеждать синдром самозванца, добиваться повышения ЗП и удачно проходить собеседования для трудоустройства на работу. Если ты хочешь в этом разобраться и стать крутым программистом, то нам есть о чем поговорить.
