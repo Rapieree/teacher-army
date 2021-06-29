@@ -27,7 +27,7 @@
 
 ### Евгений Щепотьев
 
-Фуллстек инженер-разработчик, с опытом работы в разных сферах программирования от встроенных и мобильных до масштабируемых клиент-серверных приложений. Я работал в [@jetbrains](https://jetbrains.com), [@htmlacademy](https://htmlacademy.ru) и [@swiftinvention](https://www.swiftinvention.com) знаю особенности работы серверных приложений и распределённых платформ ([PAAS](https://en.wikipedia.org/wiki/Platform_as_a_service)). Учился и читал лекции в [СПб НИУ ИТМО](https://itmo.ru/), был автором курсов по Node.js и JavaScript в [@htmlacademy](https://htmlacademy.ru), а также веду личные проекты. 
+Фуллстек инженер-разработчик, с опытом работы в разных сферах программирования от встроенных и мобильных до масштабируемых клиент-серверных приложений. Я работал в [@jetbrains](https://jetbrains.com) (8 лет), [@htmlacademy](https://htmlacademy.ru) (3 года) и [@swiftinvention](https://www.swiftinvention.com) знаю особенности работы серверных приложений и распределённых платформ ([PAAS](https://en.wikipedia.org/wiki/Platform_as_a_service)). Учился и читал лекции в [СПб НИУ ИТМО](https://itmo.ru/), был автором курсов по Node.js и JavaScript в [@htmlacademy](https://htmlacademy.ru), а также веду личные проекты. 
 
 ### Олег Акинин
 
