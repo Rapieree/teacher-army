@@ -17,7 +17,7 @@
 Пиши удобным тебе способом. Хоть ночью. Отвечу, как проснусь =)
 
 Контакты:
-- Tg: https://t.me/kicumkicum
+- Tg: [https://t.me/kicumkicum](https://t.me/kicumkicum)
 - Mail: kicumkicum@gmail.com
 - Issue: https://github.com/kicumkicum/teacher-army/issues
 
