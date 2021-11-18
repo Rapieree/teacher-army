@@ -1,11 +1,11 @@
 import Layout from "../components/layout/layout";
 
-const Contact = () => {
+const Prices = () => {
   return (
     <Layout>
-      <h1>contact</h1>
+      <h1>Prices</h1>
     </Layout>
   );
 };
 
-export default Contact;
+export default Prices;

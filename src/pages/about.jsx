@@ -1,8 +1,10 @@
+import Layout from "../components/layout/layout";
+
 const About = () => {
   return (
-    <div>
-      <h1>About</h1>
-    </div>
+    <Layout>
+      <h1>about</h1>
+    </Layout>
   );
 };
 
