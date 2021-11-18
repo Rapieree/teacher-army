@@ -1,0 +1,30 @@
+{
+  "env": {
+    "es6": true,
+    "browser": true,
+    "commonjs": true,
+    "jest": false
+  },
+
+  "extends": ["htmlacademy/es6", "plugin:react/recommended", "next/core-web-vitals"],
+
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
+    },
+    "ecmaVersion": 2018,
+    "sourceType": "module"
+  },
+
+  "plugins": ["react"],
+
+  "rules": {
+    "react/prop-types": 0
+  },
+
+  "settings": {
+    "react": {
+      "version": "17"
+    }
+  }
+}
