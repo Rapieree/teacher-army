@@ -8,4 +8,5 @@
   --color-blue-gradient: linear-gradient(264.47deg, #2E43F0 29.39%, #6677FF 93.49%);
 
   /* viewports */
+  --max-width: 1920px;
 }

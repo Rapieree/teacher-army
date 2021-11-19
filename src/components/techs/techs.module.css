@@ -1,0 +1,21 @@
+.techs {
+
+}
+
+.list {
+  margin: -20px -15px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  list-style-type: none;
+}
+
+.item {
+  margin: 20px 15px;
+  padding: 20px;
+  width: 261px;
+  height: 82px;
+  box-shadow: 1px 4px 8px rgba(0, 0, 0, 0.2);
+  background-color: var(--color-white);
+}
+

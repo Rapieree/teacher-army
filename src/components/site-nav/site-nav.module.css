@@ -12,9 +12,14 @@
 }
 
 .link {
-  color: var(--color-text-light);
+  color: var(--color-main-text-dark);
+  font-weight: bold;
 }
 
 .active {
   opacity: 1;
+}
+
+.light .link {
+  color: var(--color-text-light);
 }

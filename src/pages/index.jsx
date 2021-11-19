@@ -1,14 +1,20 @@
 import Layout from "../components/layout/layout";
+import Promo from "../components/promo/promo";
+import Techs from "../components/techs/techs";
 
-const Home = () => {
+const Main = () => {
   return (
-    <Layout>
-      <h1>home</h1>
+    <Layout main>
+      <Promo className="container mrgb-120" />
+
+      <h1 className="visually-hidden">Landing page</h1>
+
+      <Techs className="container mrgb-120" />
     </Layout>
   );
 };
 
-export default Home;
+export default Main;
 
 /*
 <Header>

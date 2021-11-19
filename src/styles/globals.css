@@ -1,9 +1,18 @@
+*,
+*:before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 html,
 body {
-  padding: 0;
-  margin: 0;
+  margin: 0 auto;
+  max-width: var(--max-width);
   font-family: "Inter", Arial, Helvetica, sans-serif;
   color: var(--color-main-text-dark);
+  background-color: var(--color-white);
 }
 
 a {
@@ -11,8 +20,21 @@ a {
   text-decoration: none;
 }
 
-*,
-*:before,
-*::after {
-  box-sizing: border-box;
+.container {
+  padding: 0 15.56%;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  border: 0;
+  clip: rect(0 0 0 0);
+}
+
+.mrgb-120 {
+  margin-bottom: 120px;
 }

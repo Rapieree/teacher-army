@@ -1,8 +1,8 @@
 import customButtonStyle from "./custom-button.module.css";
 
-const CustomButton = ({children}) => {
+const CustomButton = ({children, className}) => {
   return (
-    <button className={customButtonStyle.button}>
+    <button className={`${customButtonStyle.button} ${className}`}>
       {children}
     </button>
   );

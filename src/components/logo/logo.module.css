@@ -1,3 +1,9 @@
 .logo {
-  width: auto; /* plug */
-};
+  width: auto;
+  height: auto;
+  border: 1px solid black;
+}
+
+.light {
+  border: none;
+}
