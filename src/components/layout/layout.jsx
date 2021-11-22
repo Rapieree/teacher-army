@@ -1,5 +1,7 @@
 import Head from "next/head";
+import Footer from "../footer/footer";
 import Header from "../header/header";
+import layoutStyle from "./layout.module.css";
 
 const Layout = ({main, children}) => {
 
@@ -12,13 +14,17 @@ const Layout = ({main, children}) => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      {!main ? <Header className="container" /> : ``}
+      <div className={layoutStyle.layout}>
+        {!main ? <Header className="container" /> : ``}
 
 
-      <main>
-        <h1 className="visually-hidden"></h1>
-        {children}
-      </main>
+        <main className={layoutStyle.main}>
+          <h1 className="visually-hidden"></h1>
+          {children}
+        </main>
+
+        <Footer className="container" />
+      </div>
     </>
   );
 };

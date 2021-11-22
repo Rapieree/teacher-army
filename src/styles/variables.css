@@ -6,6 +6,8 @@
   --color-accent: #1F37FF;
   --color-special: #FF5A05;
   --color-blue-gradient: linear-gradient(264.47deg, #2E43F0 29.39%, #6677FF 93.49%);
+  --color-opacity-white: rgba(255, 255, 255, 0.3);
+  --color-dark-blue: #000848;
 
   /* viewports */
   --max-width: 1920px;

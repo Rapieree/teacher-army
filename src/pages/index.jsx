@@ -1,3 +1,4 @@
+import Idea from "../components/idea/Idea";
 import Layout from "../components/layout/layout";
 import Promo from "../components/promo/promo";
 import Techs from "../components/techs/techs";
@@ -10,6 +11,8 @@ const Main = () => {
       <h1 className="visually-hidden">Landing page</h1>
 
       <Techs className="container mrgb-120" />
+
+      <Idea className="container"/>
     </Layout>
   );
 };

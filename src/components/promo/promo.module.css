@@ -2,6 +2,7 @@
   padding-bottom: 160px;
   padding-top: 50px;
   background: var(--color-blue-gradient);
+  overflow-x: hidden;
 }
 
 .wrapper {

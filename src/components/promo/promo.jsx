@@ -1,37 +1,32 @@
 import Header from "../header/header";
-import promoStyles from "./promo.module.css";
+import promoStyle from "./promo.module.css";
 import Image from "next/dist/client/image";
 import CustomButton from "../custom-button/custom-button";
+import {promoContent} from "./promo-content";
 
-const content = {
-  title: `Inspiration Technology.`,
-  slogan: `Runs faster.`,
-  subslogan: `Costs less and never breaks.`,
-  description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla sapien lectus sit tristique rhoncus, nisi, malesuada. Tellus consequat `,
-};
+const content = promoContent;
 
 const Promo = ({className}) => {
-
   return (
-    <section className={`${promoStyles.promo} ${className}`}>
-      <Header className={promoStyles.header} light />
+    <section className={`${promoStyle.promo} ${className}`}>
+      <Header className={promoStyle.header} light />
 
-      <div className={promoStyles.wrapper}>
-        <div className={promoStyles.block}>
-          <h2 className={promoStyles.title}>{content.title}</h2>
-          <p className={promoStyles.slogan}>{content.slogan}
-            <span className={promoStyles.subslogan}>{content.subslogan}</span>
+      <div className={promoStyle.wrapper}>
+        <div className={promoStyle.block}>
+          <h2 className={promoStyle.title}>{content.title}</h2>
+          <p className={promoStyle.slogan}>{content.slogan}
+            <span className={promoStyle.subslogan}>{content.subslogan}</span>
           </p>
-          <hr className={promoStyles.hr} />
-          <p className={promoStyles.description}>{content.description}</p>
+          <hr className={promoStyle.hr} />
+          <p className={promoStyle.description}>{content.description}</p>
 
-          <div className={promoStyles.buttons}>
-            <CustomButton className={promoStyles.getStartedButton}>Get Started</CustomButton>
-            <CustomButton className={promoStyles.trialButton}>Free Trial</CustomButton>
+          <div className={promoStyle.buttons}>
+            <CustomButton className={promoStyle.getStartedButton}>Get Started</CustomButton>
+            <CustomButton className={promoStyle.trialButton}>Free Trial</CustomButton>
           </div>
         </div>
 
-        <div className={promoStyles.image}>
+        <div className={promoStyle.image}>
           <Image
             src="/images/promo.png"
             width="811"

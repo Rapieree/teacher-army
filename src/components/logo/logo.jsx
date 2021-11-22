@@ -1,10 +1,10 @@
-import logoStyles from "./logo.module.css";
+import logoStyle from "./logo.module.css";
 import Image from "next/image";
 import Link from "next/link";
 
-const Logo = ({light}) => {
+const Logo = ({light, className}) => {
   return (
-    <div className={light ? `${logoStyles.logo} ${logoStyles.light}` : logoStyles.logo}>
+    <div className={`${light ? `${logoStyle.logo} ${logoStyle.light}` : logoStyle.logo} ${className}`}>
       <Link href="/">
         <a>
           <Image
