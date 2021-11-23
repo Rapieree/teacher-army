@@ -1,0 +1,48 @@
+.subscribe {
+  padding: 66px;
+  background-color: var(--color-background-dark-cream);
+  border-radius: 30px;
+  position: relative;
+  z-index: 1;
+}
+
+.subscribe::before, .subscribe::after {
+  content: "";
+  width: 95%;
+  height: 100%;
+  background-color: inherit;
+  opacity: 0.4;
+  position: absolute;
+  top: -30px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: inherit;
+  z-index: -1;
+}
+
+.subscribe::after {
+  top: -60px;
+  width: 90%;
+  opacity: 0.3;
+}
+
+.block {
+  margin: 0 auto;
+  max-width: 620px;
+  text-align: center;
+}
+
+.title {
+  margin-bottom: 35px;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 160%;
+  color: var(--color-special);
+}
+
+.description {
+  margin-bottom: 35px;
+  font-weight: 600;
+  font-size: 39px;
+  line-height: 130%;
+}

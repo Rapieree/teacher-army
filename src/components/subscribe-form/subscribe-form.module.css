@@ -1,0 +1,39 @@
+.wrapper {
+  padding: 12px;
+  height: 77px;
+  border: 1px solid var(--color-border-gray-2);
+  border-radius: 4px;
+}
+
+.wrapper form {
+  display: flex;
+}
+
+.wrapper input[type="email"] {
+  margin-right: 30px;
+  padding-left: 12px;
+  display: block;
+  width: 100%;
+  border: none;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 160%;
+  color: inherit;
+  opacity: 0.7;
+  background-color: transparent;
+}
+
+.wrapper input[type="email"]::placeholder {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 160%;
+  color: var(--color-text-gray);
+}
+
+.wrapper button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 184px;
+  height: 100%;
+}
