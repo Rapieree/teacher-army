@@ -3,11 +3,16 @@
   --color-white: #FFFFFF;
   --color-main-text-dark: #05000B;
   --color-text-light: #FFFFFF;
+  --color-text-gray: #A6A6A6;
   --color-accent: #1F37FF;
   --color-special: #FF5A05;
   --color-blue-gradient: linear-gradient(264.47deg, #2E43F0 29.39%, #6677FF 93.49%);
   --color-opacity-white: rgba(255, 255, 255, 0.3);
   --color-dark-blue: #000848;
+  --color-background-cream: #FFF9F5;
+  --color-background-dark-cream: #FDEEE7;;
+  --color-border-gray-1: rgba(66, 82, 207, 0.1);
+  --color-border-gray-2: rgba(5, 0, 11, 0.1);
 
   /* viewports */
   --max-width: 1920px;

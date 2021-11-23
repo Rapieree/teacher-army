@@ -1,7 +1,9 @@
+import Features from "../components/features/features";
 import Idea from "../components/idea/Idea";
 import Layout from "../components/layout/layout";
 import Promo from "../components/promo/promo";
 import Techs from "../components/techs/techs";
+import mainPageStyle from "../styles/main-page.module.css";
 
 const Main = () => {
   return (
@@ -12,7 +14,11 @@ const Main = () => {
 
       <Techs className="container mrgb-120" />
 
-      <Idea className="container"/>
+      <Idea className="container mrgb-120"/>
+
+      <div className={`${mainPageStyle.features} mrgb-120`}>
+        <Features className="container" />
+      </div>
     </Layout>
   );
 };

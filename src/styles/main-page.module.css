@@ -1,0 +1,9 @@
+.statistics {
+  /* background-color: aqua; */
+}
+
+.features {
+  padding-top: 88px;
+  padding-bottom: 70px;
+  background-color: var(--color-background-cream);
+}
