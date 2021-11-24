@@ -1,7 +1,7 @@
 import RatingStarSvg from "../../assets/svg/icon-rating-star.svg";
 import starsRatingViewStyle from "./stars-rating-view.module.css";
 
-const StarsRatingView = ({count}) => {
+const StarsRatingView = ({count, className}) => {
   const getStars = () => {
     const stars = [];
 
@@ -19,7 +19,7 @@ const StarsRatingView = ({count}) => {
   };
 
   return (
-    <div className={starsRatingViewStyle.starsRating}>
+    <div className={`${starsRatingViewStyle.starsRating} ${className}`}>
       {getStars().map((star) => star)}
     </div>
   );

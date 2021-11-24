@@ -22,14 +22,14 @@ const Slider = ({className, children = []}) => {
           aria-label="Previous slide"
           disabled = {checkIndex(currentSlideIndex - 1) ? false : true}
           onClick={() => setCurrentSlideIndex(currentSlideIndex - 1)}
-        >prev</button>
+        ></button>
         <button
           className={sliderStyle.controlNext}
           type="button"
           aria-label="Next slide"
           disabled = {checkIndex(currentSlideIndex + 1) ? false : true}
           onClick={() => setCurrentSlideIndex(currentSlideIndex + 1)}
-        >next</button>
+        ></button>
       </div>
     </div>
   );

@@ -8,7 +8,7 @@
 }
 
 .infoBlock {
-  max-width: 400px;
+  max-width: 380px;
   margin: -30px 0 0 -30px;
   padding: 12px 30px 12px 30px;
   box-shadow: 13px 13px 31px rgba(0, 0, 0, 0.05);
@@ -35,4 +35,3 @@
   font-size: 16px;
   line-height: 160%;
 }
-

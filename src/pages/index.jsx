@@ -24,6 +24,8 @@ const Main = () => {
       <div className="container mrgb-120">
         <Subscribe />
       </div>
+
+      <UserReviews className="container mrgb-120" />
     </Layout>
   );
 };
