@@ -10,9 +10,11 @@
   --color-opacity-white: rgba(255, 255, 255, 0.3);
   --color-dark-blue: #000848;
   --color-background-cream: #FFF9F5;
-  --color-background-dark-cream: #FDEEE7;;
+  --color-background-dark-cream: #FDEEE7;
+  --color-button-cream: rgba(255, 90, 5, 0.1);
   --color-border-gray-1: rgba(66, 82, 207, 0.1);
   --color-border-gray-2: rgba(5, 0, 11, 0.1);
+  --color-background-sky: #EBEDFF;
 
   /* viewports */
   --max-width: 1920px;

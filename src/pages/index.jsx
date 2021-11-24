@@ -4,6 +4,7 @@ import Layout from "../components/layout/layout";
 import Promo from "../components/promo/promo";
 import Subscribe from "../components/subscribe/subscribe";
 import Techs from "../components/techs/techs";
+import UserReviews from "../components/user-reviews/user-reviews";
 import mainPageStyle from "../styles/main-page.module.css";
 
 const Main = () => {
@@ -26,6 +27,11 @@ const Main = () => {
       </div>
 
       <UserReviews className="container mrgb-120" />
+
+      <div className={`${mainPageStyle.tariffs} mrgb-120`}>
+        <Tariffs className="container" />
+      </div>
+
     </Layout>
   );
 };
