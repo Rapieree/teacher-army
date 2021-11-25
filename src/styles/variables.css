@@ -6,6 +6,8 @@
   --color-text-gray: #A6A6A6;
   --color-accent: #1F37FF;
   --color-special: #FF5A05;
+  --color-special-darken: #f8290e;
+  --color-special-darkest: #e63a06;
   --color-blue-gradient: linear-gradient(264.47deg, #2E43F0 29.39%, #6677FF 93.49%);
   --color-opacity-white: rgba(255, 255, 255, 0.3);
   --color-dark-blue: #000848;
@@ -18,4 +20,7 @@
 
   /* viewports */
   --max-width: 1920px;
+
+  /* animation */
+  --duration-fast: 0.3s;
 }

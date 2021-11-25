@@ -21,6 +21,11 @@
   color: inherit;
   opacity: 0.7;
   background-color: transparent;
+  transition: all var(--duration-fast);
+}
+
+.wrapper input[type="email"]:hover {
+  opacity: 1;
 }
 
 .wrapper input[type="email"]::placeholder {
@@ -28,6 +33,11 @@
   font-size: 16px;
   line-height: 160%;
   color: var(--color-text-gray);
+  transition: color var(--duration-fast);
+}
+
+.wrapper input[type="email"]:hover::placeholder {
+  color: inherit;
 }
 
 .wrapper button {

@@ -15,6 +15,16 @@
   align-items: center;
   width: 40px;
   height: 40px;
-  background: var(--color-opacity-white);
+  background-color: var(--color-opacity-white);
   border-radius: 50%;
+  transition: all var(--duration-fast);
+}
+
+.link:hover,
+.link:focus {
+  background-color: var(--color-accent);
+}
+
+.link:active {
+  transform: scale(0.90);
 }

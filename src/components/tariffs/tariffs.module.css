@@ -30,6 +30,11 @@
   color: var(--color-special);
 }
 
+.navButton:hover,
+.navButton:focus {
+  color: var(--color-text-light);
+}
+
 .navActive {
   background-color: var(--color-special);
   color: var(--color-text-light);

@@ -24,5 +24,36 @@
 }
 
 .item {
+  transition: all var(--duration-fast);
+}
+
+.link {
+  display: inline-block;
+  position: relative;
   opacity: 0.8;
+  transition: all var(--duration-fast);
+}
+
+.link::after {
+  content: "";
+  width: 0;
+  height: 1px;
+  background-color: var(--color-text-light);
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  transition: all var(--duration-fast);
+}
+
+.link:hover,
+.link:focus-within {
+  opacity: 1;
+}
+
+.link:hover::after {
+  width: 105%;
+}
+
+.link:active {
+  transform: scale(0.95);
 }
