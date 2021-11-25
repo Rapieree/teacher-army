@@ -2,7 +2,9 @@ import Features from "../components/features/features";
 import Idea from "../components/idea/Idea";
 import Layout from "../components/layout/layout";
 import Promo from "../components/promo/promo";
+import Statistics from "../components/statistics/statistics";
 import Subscribe from "../components/subscribe/subscribe";
+import Tariffs from "../components/tariffs/tariffs";
 import Techs from "../components/techs/techs";
 import UserReviews from "../components/user-reviews/user-reviews";
 import mainPageStyle from "../styles/main-page.module.css";
@@ -17,6 +19,10 @@ const Main = () => {
       <Techs className="container mrgb-120" />
 
       <Idea className="container mrgb-120"/>
+
+      <div className={mainPageStyle.statistics}>
+        <Statistics className="container mrgb-120" />
+      </div>
 
       <div className={`${mainPageStyle.features} mrgb-120`}>
         <Features className="container" />
