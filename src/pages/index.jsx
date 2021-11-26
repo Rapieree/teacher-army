@@ -1,5 +1,5 @@
 import Features from "../components/features/features";
-import Idea from "../components/idea/Idea";
+import Idea from "../components/idea/idea";
 import Layout from "../components/layout/layout";
 import Promo from "../components/promo/promo";
 import Statistics from "../components/statistics/statistics";
