@@ -1,0 +1,13 @@
+.starsRating {
+  display: grid;
+  grid-template-columns: repeat(5, min-content);
+  column-gap: 10px;
+}
+
+.star {
+  color: #FFF9C7;
+}
+
+.activeStar {
+  color: #FFE816;
+}

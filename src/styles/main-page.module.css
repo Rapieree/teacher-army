@@ -1,0 +1,25 @@
+.statistics {
+  /* background-color: aqua; */
+}
+
+.features {
+  padding-top: 88px;
+  padding-bottom: 70px;
+  background-color: var(--color-background-cream);
+}
+
+.tariffs {
+  position: relative;
+  z-index: 0;
+}
+
+.tariffs::before {
+  content: "";
+  width: 100%;
+  height: 500px;
+  background-color: var(--color-background-sky);
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}

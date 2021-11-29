@@ -1,0 +1,25 @@
+.button {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  padding: 15px 30px;
+  background-color: var(--color-special);
+  border: none;
+  border-radius: 4px;
+  color: var(--color-text-light);
+  cursor: pointer;
+  font-family: inherit;
+  font-weight: 500;
+  font-size: 20px;
+  transition: all var(--duration-fast);
+}
+
+.button:hover,
+.button:focus {
+  background-color: var(--color-special-darken);
+}
+
+.button:active {
+  background-color: var(--color-special-darkest);
+  transform: scale(0.95);
+}

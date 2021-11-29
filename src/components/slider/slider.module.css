@@ -1,0 +1,51 @@
+.controls {
+  margin-top: -50px;
+  margin-left: 10%;
+  width: max-content;
+}
+
+.controls button {
+  width: 46px;
+  height: 46px;
+  background-color: var(--color-special);
+  border: none;
+  border-radius: 62.5px 62.5px 62.5px 0px;
+  cursor: pointer;
+  position: relative;
+  transition: all var(--duration-fast);
+}
+
+.controls button:disabled {
+  opacity: 0.3;
+  pointer-events: none;
+}
+
+.controls button:hover,
+.controls button:focus {
+  background-color: var(--color-special-darken);
+}
+
+.controls button::before {
+  content: "";
+  position: absolute;
+  top: 35%;
+  left: 30%;
+  transform: rotate(135deg);
+  width: 12px;
+  height: 12px;
+  border-top: 2px solid var(--color-white);
+  border-left: 2px solid var(--color-white);
+}
+
+.controlPrev {
+  margin-right: 10px;
+  transform: matrix(-1, 0, 0, 1, 0, 0);
+}
+
+.controlPrev:active {
+  transform: scale(0.9) matrix(-1, 0, 0, 1, 0, 0);
+}
+
+.controlNext:active {
+  transform: scale(0.9);
+}
