@@ -22,7 +22,7 @@
 }
 
 .list {
-  margin: -15px;
+  margin: -15px 0;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -30,7 +30,7 @@
 }
 
 .item {
-  margin: 15px;
+  margin: 15px 0;
   max-width: 261px;
   max-height: 371px;
   position: relative;
