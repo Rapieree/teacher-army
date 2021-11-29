@@ -2,7 +2,7 @@ import {useState} from "react";
 import sliderStyle from "./slider.module.css";
 
 const checkIndex = (children, index) => {
-  return Array.isArray(children) & children.hasOwnProperty(index) ? true : false;
+  return Array.isArray(children) && children.hasOwnProperty(index) ? true : false;
 };
 
 const Slider = ({className, children = []}) => {
