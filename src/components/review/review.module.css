@@ -16,13 +16,13 @@
 
 .name {
   font-weight: 600;
-  font-size: 25px;
+  font-size: 1.56rem;
   line-height: 160%;
 }
 
 .shortInfo {
   font-weight: 400;
-  font-size: 20px;
+  font-size: 1.25rem;
   line-height: 160%;
   opacity: 0.8;
 }
@@ -32,6 +32,6 @@
   padding-right: 90px;
   font-weight: 400;
   font-style: italic;
-  font-size: 16px;
+  font-size: 1rem;
   line-height: 160%;
 }

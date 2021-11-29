@@ -44,7 +44,7 @@
 
 .name {
   font-weight: 600;
-  font-size: 20px;
+  font-size: 1.25rem;
   line-height: 160%;
   opacity: 0.7;
   text-align: center;
@@ -53,7 +53,7 @@
 .count {
   margin-bottom: 5%;
   font-weight: bold;
-  font-size: 50px;
+  font-size: 3.12rem;
   line-height: 120%;
   color: var(--color-accent);
 }

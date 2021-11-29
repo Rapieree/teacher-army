@@ -41,6 +41,7 @@
 .link {
   color: var(--color-main-text-dark);
   font-weight: bold;
+  font-size: 1.25rem;
 }
 
 /* modiff */
