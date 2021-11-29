@@ -3,7 +3,7 @@ import Footer from "../footer/footer";
 import Header from "../header/header";
 import layoutStyle from "./layout.module.css";
 
-const Layout = ({main, children}) => {
+const Layout = ({main, children, content}) => {
 
   return (
     <>
@@ -15,15 +15,14 @@ const Layout = ({main, children}) => {
       </Head>
 
       <div className={layoutStyle.layout}>
-        {!main ? <Header className="container" /> : ``}
-
+        {!main ? <Header className="container" /> : null}
 
         <main className={layoutStyle.main}>
           <h1 className="visually-hidden"></h1>
           {children}
         </main>
 
-        <Footer className="container" />
+        <Footer className="container" content={content.footer} />
       </div>
     </>
   );

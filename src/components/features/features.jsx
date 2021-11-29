@@ -1,9 +1,7 @@
-import {featuresContent} from "./features-content";
+import {ReactSVG} from "react-svg";
 import featuresStyle from "./features.module.css";
 
-const content = featuresContent;
-
-const Features = ({className}) => {
+const Features = ({className, content}) => {
   return (
     <section className={`${featuresStyle.features} ${className}`}>
       <div className={featuresStyle.wrapper}>
@@ -17,7 +15,13 @@ const Features = ({className}) => {
           content.featuresList.map((card) => {
             return (
               <div className={featuresStyle.card} key={card.name}>
-                {card.icon}
+                <ReactSVG
+                  src={card.icon.src}
+                  className={featuresStyle.icon}
+                  width={card.icon.width}
+                  height={card.icon.height}
+                  wrapper="svg"
+                />
                 <h3 className={featuresStyle.cardName}>{card.name}</h3>
                 <p className={featuresStyle.cardText}>{card.description}</p>
               </div>

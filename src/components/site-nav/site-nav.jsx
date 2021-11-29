@@ -3,16 +3,16 @@ import Link from "next/link";
 import {navsItems} from "../../utils/const";
 import siteNavStyle from "./site-nav.module.css";
 
+const getItemLinkClasses = (hrefLink, activeUrl, islight) => {
+  let outClasses = siteNavStyle.item;
+  outClasses += hrefLink === activeUrl ? ` ${siteNavStyle.active}` : ``;
+  outClasses += islight ? ` ${siteNavStyle.light}` : ``;
+
+  return outClasses;
+};
+
 const SiteNav = ({light}) => {
   const router = useRouter();
-
-  const getItemLinkClasses = (hrefLink, activeUrl, islight) => {
-    let outClasses = siteNavStyle.item;
-    outClasses += hrefLink === activeUrl ? ` ${siteNavStyle.active}` : ``;
-    outClasses += islight ? ` ${siteNavStyle.light}` : ``;
-
-    return outClasses;
-  };
 
   return (
     <nav>

@@ -1,10 +1,7 @@
-import {statisticsContent} from "./statistics-content";
 import statisticsStyle from "./statistics.module.css";
-import ShieldSvg from "../../assets/svg/shield.svg";
+import {ReactSVG} from "react-svg";
 
-const content = statisticsContent;
-
-const Statistics = ({className}) => {
+const Statistics = ({className, content}) => {
   return (
     <section className={`${statisticsStyle.statisctics} ${className}`}>
       <h2 className="visually-hidden">Out statistics</h2>
@@ -15,9 +12,7 @@ const Statistics = ({className}) => {
               <li key={item.name} className={statisticsStyle.item}>
                 <p className={statisticsStyle.count}>{item.count}</p>
                 <p className={statisticsStyle.name}>{item.name}</p>
-                <div className={statisticsStyle.shield}>
-                  <ShieldSvg className={statisticsStyle.shit} />
-                </div>
+                <ReactSVG src="/images/svg/shield.svg" className={statisticsStyle.shield} wrapper="svg" />
               </li>
             );
           })

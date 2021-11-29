@@ -7,39 +7,48 @@ import Subscribe from "../components/subscribe/subscribe";
 import Tariffs from "../components/tariffs/tariffs";
 import Techs from "../components/techs/techs";
 import UserReviews from "../components/user-reviews/user-reviews";
+import {mainContent} from "../content/main/main";
 import mainPageStyle from "../styles/main-page.module.css";
 
-const Main = () => {
+const Main = ({content}) => {
   return (
-    <Layout main>
-      <Promo className="container mrgb-120" />
+    <Layout main content={content}>
+      <Promo className="container mrgb-120" content={content.promo}/>
 
       <h1 className="visually-hidden">Landing page</h1>
 
-      <Techs className="container mrgb-120" />
+      <Techs className="container mrgb-120" content={content.techs} />
 
-      <Idea className="container mrgb-120"/>
+      <Idea className="container mrgb-120" content={content.idea} />
 
       <div className={mainPageStyle.statistics}>
-        <Statistics className="container mrgb-120" />
+        <Statistics className="container mrgb-120" content={content.statistics} />
       </div>
 
       <div className={`${mainPageStyle.features} mrgb-120`}>
-        <Features className="container" />
+        <Features className="container" content={content.features}/>
       </div>
 
       <div className="container mrgb-120">
-        <Subscribe />
+        <Subscribe content={content.subscribe} />
       </div>
 
-      <UserReviews className="container mrgb-120" />
+      <UserReviews className="container mrgb-120" content={content.userReviews} />
 
       <div className={`${mainPageStyle.tariffs} mrgb-120`}>
-        <Tariffs className="container" />
+        <Tariffs className="container" content={content.tariffs} />
       </div>
 
     </Layout>
   );
+};
+
+export const getStaticProps = async () => {
+  return {
+    props: {
+      content: mainContent,
+    }
+  };
 };
 
 export default Main;

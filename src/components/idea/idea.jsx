@@ -1,12 +1,9 @@
 import Image from "next/image";
-import {ideaContent} from "./idea-content";
 import ideaStyle from "./idea.module.css";
-import FeatureMarkSvg from "../../assets/svg/icon-feature-mark.svg";
 import CustomButton from "../custom-button/custom-button";
+import {ReactSVG} from "react-svg";
 
-const content = ideaContent;
-
-const Idea = ({className}) => {
+const Idea = ({className, content}) => {
   return (
     <section className={`${ideaStyle.idea} ${className}`}>
       <div className={ideaStyle.image}>
@@ -28,7 +25,13 @@ const Idea = ({className}) => {
             content.featuresList.map((name) => {
               return (
                 <li key={name} className={ideaStyle.item}>
-                  <FeatureMarkSvg className={ideaStyle.itemIcon} width={24} height={24} />
+                  <ReactSVG
+                    src={content.icon.src}
+                    className={ideaStyle.itemIcon}
+                    width={content.icon.width}
+                    height={content.icon.height}
+                    wrapper="svg"
+                  />
                   <span>{name}</span>
                 </li>
               );

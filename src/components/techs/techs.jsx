@@ -1,10 +1,7 @@
 import Image from "next/dist/client/image";
-import {techsContent} from "./techs-content";
 import techsStyle from "./techs.module.css";
 
-const content = techsContent;
-
-const Techs = ({className}) => {
+const Techs = ({className, content}) => {
   return (
     <section className={`${techsStyle.techs} ${className}`}>
       <ul className={techsStyle.list}>
