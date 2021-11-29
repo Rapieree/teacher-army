@@ -1,10 +1,7 @@
 import SubscribeForm from "../subscribe-form/subscribe-form";
-import {subscribeContent} from "./subscribe-content";
 import subscribeStyle from "./subscribe.module.css";
 
-const content = subscribeContent;
-
-const Subscribe = ({className}) => {
+const Subscribe = ({className, content}) => {
   return (
     <section className={`${subscribeStyle.subscribe} ${className}`}>
       <div className={subscribeStyle.block}>

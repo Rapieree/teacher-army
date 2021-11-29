@@ -1,13 +1,9 @@
-import {tariffsContent} from "./tariffs-content";
 import tariffsStyle from "./tariffs.module.css";
-import FeatureMarkSvg from "../../assets/svg/icon-feature-mark.svg";
 import CustomButton from "../custom-button/custom-button";
-import NotchSvg from "../../assets/svg/icon-notch.svg";
+import {ReactSVG} from "react-svg";
 import TabsNav from "../tabs/tabs-nav";
 import Tabs from "../tabs/tabs";
 import Tab from "../tabs/tab";
-
-const content = tariffsContent;
 
 const TariffCard = ({tariffData}) => {
   const {type, price, duration, features, icon, buttonText} = tariffData;
@@ -15,8 +11,8 @@ const TariffCard = ({tariffData}) => {
   return (
     <div className={tariffsStyle.card}>
       <div className={tariffsStyle.topIcon}>
-        <NotchSvg className={tariffsStyle.notch} width="202" height="80" />
-        {icon}
+        <ReactSVG src="/images/svg/icon-notch.svg" className={tariffsStyle.notch} width="202" height="80" wrapper="svg" />
+        <ReactSVG src={icon.src} className={tariffsStyle.icon} width={icon.width} height={icon.height} wrapper="svg"/>
       </div>
       <p className={tariffsStyle.type}>{type}</p>
       <p className={tariffsStyle.price}>{price}</p>
@@ -26,7 +22,13 @@ const TariffCard = ({tariffData}) => {
           features.map((feature) => {
             return (
               <li key={feature} className={tariffsStyle.item}>
-                <FeatureMarkSvg className={tariffsStyle.itemIcon} width="20" height="20" />
+                <ReactSVG
+                  src="/images/svg/icon-feature-mark.svg"
+                  className={tariffsStyle.itemIcon}
+                  width="24"
+                  height="24"
+                  wrapper="svg"
+                />
                 <span>{feature}</span>
               </li>
             );
@@ -38,7 +40,7 @@ const TariffCard = ({tariffData}) => {
   );
 };
 
-const Tariffs = ({className}) => {
+const Tariffs = ({className, content}) => {
   return (
     <section className={`${tariffsStyle.tariffs} ${className}`}>
       <h2 className={tariffsStyle.title}>{content.title}</h2>
@@ -63,7 +65,6 @@ const Tariffs = ({className}) => {
           </div>
         </Tab>
       </Tabs>
-
     </section>
   );
 };

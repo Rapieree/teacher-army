@@ -10,5 +10,10 @@ export const ideaContent = {
     `High Analysis`,
     `Certified Institute`,
   ],
+  icon: {
+    src: `/images/svg/icon-feature-mark.svg`,
+    width: 24,
+    height: 24,
+  },
   buttonText: `Learn More`,
 };

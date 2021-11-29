@@ -1,6 +1,3 @@
-import FireSvg from "../../assets/svg/icon-fire.svg";
-import HeartsSvg from "../../assets/svg/icon-hearts.svg";
-
 export const tariffsContent = {
   title: `Without Extra Charge Choose Your Best Plan`,
   tabsNav: [
@@ -8,7 +5,11 @@ export const tariffsContent = {
     `Yearly`,
   ],
   tabFirst: {
-    icon: <FireSvg width="29" height="38" />,
+    icon: {
+      src: `/images/svg/icon-fire.svg`,
+      width: 29,
+      height: 38,
+    },
     type: `Standard`,
     price: `$29`,
     duration: `monthly pack`,
@@ -22,7 +23,11 @@ export const tariffsContent = {
     buttonText: `Install Pack`,
   },
   tabSecond: {
-    icon: <HeartsSvg width="47" height="36" />,
+    icon: {
+      src: `/images/svg/icon-hearts.svg`,
+      width: 47,
+      height: 36,
+    },
     type: `NoN Standart`,
     price: `$666`,
     duration: `creepy pack`,

@@ -16,7 +16,6 @@ const LinksList = ({title, linksData, className}) => {
         }
       </ul>
     </div>
-
   );
 };
 

@@ -1,11 +1,8 @@
 import Image from "next/image";
 import Review from "../review/review";
 import Slider from "../slider/slider";
-import {userReviewsContent} from "./user-reviews-content";
 import userReviewsStyle from "./user-reviews.module.css";
-import QuoteSvg from "../../assets/svg/icon-quote.svg";
-
-const content = userReviewsContent;
+import {ReactSVG} from "react-svg";
 
 const Slide = ({slideData}) => {
   const {reviewData, imageSrc} = slideData;
@@ -21,7 +18,7 @@ const Slide = ({slideData}) => {
           objectFit="contain"
           layout="intrinsic"
         />
-        <QuoteSvg width={125} height={125} className={userReviewsStyle.quoteImage} />
+        <ReactSVG src="/images/svg/icon-quote.svg" width={125} height={125} className={userReviewsStyle.quoteImage} wrapper="svg" />
       </div>
       <Review reviewData={reviewData} className={userReviewsStyle.review}/>
     </div>
@@ -29,7 +26,7 @@ const Slide = ({slideData}) => {
 };
 
 
-const UserReviews = ({className}) => {
+const UserReviews = ({className, content}) => {
   return (
     <section className={`${userReviewsStyle.userReviews} ${className}`}>
       <div className={userReviewsStyle.topBlock}>

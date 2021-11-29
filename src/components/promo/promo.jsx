@@ -2,11 +2,8 @@ import Header from "../header/header";
 import promoStyle from "./promo.module.css";
 import Image from "next/dist/client/image";
 import CustomButton from "../custom-button/custom-button";
-import {promoContent} from "./promo-content";
 
-const content = promoContent;
-
-const Promo = ({className}) => {
+const Promo = ({className, content}) => {
   return (
     <section className={`${promoStyle.promo} ${className}`}>
       <Header className={promoStyle.header} light />
@@ -28,10 +25,10 @@ const Promo = ({className}) => {
 
         <div className={promoStyle.image}>
           <Image
-            src="/images/promo.png"
-            width="811"
-            height="589"
-            alt="promo image"
+            src={content.image.src}
+            width={content.image.width}
+            height={content.image.height}
+            alt={content.image.alt}
           />
         </div>
       </div>

@@ -1,17 +1,14 @@
 import LinksList from "../linksList/links-list";
 import Logo from "../logo/logo";
 import Socials from "../socials/socials";
-import {footerContent} from "./footer-content";
 import footerStyle from "./footer.module.css";
 
-const content = footerContent;
-
-const Footer = ({className}) => {
+const Footer = ({className, content}) => {
   return (
     <footer className={`${footerStyle.footer} ${className}`}>
       <div className={footerStyle.block}>
         <Logo light className={footerStyle.logo}/>
-        <Socials />
+        <Socials content={content.socials} />
       </div>
       <div className={`${footerStyle.linksBlock}`}>
         <LinksList

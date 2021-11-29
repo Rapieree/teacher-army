@@ -1,9 +1,7 @@
-import {socialsContent} from "./socials-content";
+import {ReactSVG} from "react-svg";
 import socialsStyle from "./socials.module.css";
 
-const content = socialsContent;
-
-const Socials = () => {
+const Socials = ({content}) => {
   return (
     <ul className={socialsStyle.list}>
       {
@@ -11,7 +9,7 @@ const Socials = () => {
           return (
             <li key={link.name} className={socialsStyle.item}>
               <a href={link.href} className={socialsStyle.link}>
-                {link.image}
+                <ReactSVG src={link.icon.src} width={link.icon.width} height={link.icon.height} wrapper="svg" />
                 <span className="visually-hidden">{link.name}</span>
               </a>
             </li>

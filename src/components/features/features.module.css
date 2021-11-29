@@ -43,11 +43,11 @@
   background-color: var(--color-accent);
 }
 
-.card:hover svg {
+.card:hover .icon {
   color: var(--color-white);
 }
 
-.card svg {
+.icon {
   margin-bottom: 20px;
   color: var(--color-accent);
 }

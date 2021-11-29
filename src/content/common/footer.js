@@ -58,4 +58,42 @@ export const footerContent = {
       },
     ],
   },
+  socials: [
+    {
+      name: `Facebook`,
+      href: `#`,
+      icon: {
+        src: `/images/svg/icon-facebook.svg`,
+        width: 10,
+        height: 20,
+      },
+    },
+    {
+      name: `Twitter`,
+      href: `#`,
+      icon: {
+        src: `/images/svg/icon-twitter.svg`,
+        width: 17,
+        height: 14,
+      },
+    },
+    {
+      name: `Instagram`,
+      href: `#`,
+      icon: {
+        src: `/images/svg/icon-instagram.svg`,
+        width: 19,
+        height: 18,
+      },
+    },
+    {
+      name: `Youtube`,
+      href: `#`,
+      icon: {
+        src: `/images/svg/icon-youtube.svg`,
+        width: 19,
+        height: 14,
+      },
+    },
+  ],
 };

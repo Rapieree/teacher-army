@@ -34,7 +34,7 @@
   max-width: 261px;
   max-height: 371px;
   position: relative;
-  padding: 4.2% 20px 14.2% 20px;
+  padding: 6.2% 30px 14.2% 30px;
   width: calc((100% - 90px) / 4);
   display: flex;
   flex-direction: column;
@@ -64,11 +64,5 @@
   left: 0;
   width: 100%;
   height: 100%;
-}
-
-.shit {
-  position: absolute;
-  top: 0;
-  left: 0;
   z-index: -1;
 }
