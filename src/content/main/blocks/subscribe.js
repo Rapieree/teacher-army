@@ -1,4 +1,4 @@
 export const subscribeContent = {
-  title: `Newsletter`,
-  description: `We Offer Every Month 20% Off For Our All Subscribers`,
+  slogan: `Будущее в твоих руках`,
+  description: `Оставьте заявку и мы с вами свяжемся в ближайшее время`,
 };

@@ -4,8 +4,9 @@ import subscribeStyle from "./subscribe.module.css";
 const Subscribe = ({className, content}) => {
   return (
     <section className={`${subscribeStyle.subscribe} ${className}`}>
+      <h2 className="visually-hidden">Форма обратной связи</h2>
       <div className={subscribeStyle.block}>
-        <h2 className={subscribeStyle.title}>{content.title}</h2>
+        <p className={subscribeStyle.slogan}>{content.slogan}</p>
         <p className={subscribeStyle.description}>{content.description}</p>
         <SubscribeForm />
       </div>

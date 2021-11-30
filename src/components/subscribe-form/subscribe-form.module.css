@@ -1,34 +1,51 @@
 .wrapper {
-  padding: 12px;
-  height: 77px;
+  padding: 20px 50px;
   border: 1px solid var(--color-border-gray-2);
   border-radius: 4px;
 }
 
 .wrapper form {
-  display: flex;
+  text-align: left;
 }
 
-.wrapper input[type="email"] {
-  margin-right: 30px;
-  padding-left: 12px;
+.wrapper label {
+  display: inline-block;
+  margin-left: 5px;
+  margin-bottom: 5px;
+  font-weight: 500;
+  font-size: 1rem;
+  line-height: 160%;
+  color: var(--color-main-text-dark);
+  opacity: 0.8;
+}
+
+.wrapper input,
+.wrapper textarea {
+  margin-bottom: 15px;
+  padding: 12px 30px 12px 30px;
   display: block;
   width: 100%;
-  border: none;
+  border: 1px solid rgba(66, 82, 207, 0.1);
   font-weight: 500;
   font-size: 1.25rem;
   line-height: 160%;
   color: inherit;
-  opacity: 0.7;
+  opacity: 0.9;
   background-color: transparent;
   transition: all var(--duration-fast);
 }
 
-.wrapper input[type="email"]:hover {
+.wrapper textarea {
+  height: 130px;
+  resize: none;
+}
+
+.wrapper input:hover {
   opacity: 1;
 }
 
-.wrapper input[type="email"]::placeholder {
+.wrapper input::placeholder,
+.wrapper textarea::placeholder {
   font-weight: 500;
   font-size: 1.25rem;
   line-height: 160%;
@@ -36,11 +53,12 @@
   transition: color var(--duration-fast);
 }
 
-.wrapper input[type="email"]:hover::placeholder {
+.wrapper input:hover::placeholder {
   color: inherit;
 }
 
 .wrapper button {
+  margin: 0 auto;
   display: flex;
   justify-content: center;
   align-items: center;
