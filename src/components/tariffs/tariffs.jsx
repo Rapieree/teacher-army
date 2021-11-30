@@ -1,6 +1,9 @@
 import tariffsStyle from "./tariffs.module.css";
 import CustomButton from "../custom-button/custom-button";
 import {ReactSVG} from "react-svg";
+import TabsNav from "../tabs/tabs-nav";
+import Tabs from "../tabs/tabs";
+import Tab from "../tabs/tab";
 
 const TariffCard = ({tariffData}) => {
   const {type, price, duration, features, icon, buttonText} = tariffData;
@@ -41,14 +44,27 @@ const Tariffs = ({className, content}) => {
   return (
     <section className={`${tariffsStyle.tariffs} ${className}`}>
       <h2 className={tariffsStyle.title}>{content.title}</h2>
-      <div className={tariffsStyle.tabsNav}>
-        <CustomButton className={`${tariffsStyle.navButton} ${tariffsStyle.navActive}`}>{content.tabsNav[0]}</CustomButton>
-        <CustomButton className={tariffsStyle.navButton}>{content.tabsNav[1]}</CustomButton>
-      </div>
-      <div className={tariffsStyle.tabContent}>
-        <TariffCard tariffData={content.tabFirst} />
-        <TariffCard tariffData={content.tabFirst} />
-      </div>
+
+      <Tabs activeClass={tariffsStyle.navActive} activeTabLabel="monthly">
+        <TabsNav className={tariffsStyle.tabsNav}>
+          <CustomButton className={tariffsStyle.navButton} label="monthly">Monthly</CustomButton>
+          <CustomButton className={tariffsStyle.navButton} label="yearly">Yearly</CustomButton>
+        </TabsNav>
+
+        <Tab label="monthly">
+          <div className={tariffsStyle.tabContent}>
+            <TariffCard tariffData={content.tabFirst} />
+            <TariffCard tariffData={content.tabFirst} />
+          </div>
+        </Tab>
+
+        <Tab label="yearly">
+          <div className={tariffsStyle.tabContent}>
+            <TariffCard tariffData={content.tabSecond} />
+            <TariffCard tariffData={content.tabSecond} />
+          </div>
+        </Tab>
+      </Tabs>
     </section>
   );
 };
