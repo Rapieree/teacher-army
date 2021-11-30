@@ -4,15 +4,17 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  text-size-adjust: none;
 }
 
 html,
 body {
   margin: 0 auto;
-  max-width: var(--max-width);
+  max-width: 1920px;
   font-family: "Inter", Arial, Helvetica, sans-serif;
   color: var(--color-main-text-dark);
   background-color: var(--color-white);
+  font-size: 16px;
 }
 
 a {
@@ -37,4 +39,20 @@ a {
 
 .mrgb-120 {
   margin-bottom: 120px;
+}
+
+@media screen and (max-width: 1365px) {
+  html {
+    font-size: 14px;
+  }
+
+  .container {
+    padding: 0 5%;
+  }
+}
+
+@media screen and (max-width: 1023px) {
+  .container {
+    padding: 0 50px;
+  }
 }

@@ -8,12 +8,11 @@ const Idea = ({className, content}) => {
     <section className={`${ideaStyle.idea} ${className}`}>
       <div className={ideaStyle.image}>
         <Image
-          width={515}
-          height={454}
           alt={content.image.alt}
           src={content.image.src}
-          objectFit="contain"
-          layout="responsive"
+          objectFit="cover"
+          layout="fill"
+          quality={90}
         />
       </div>
       <div className={ideaStyle.block}>

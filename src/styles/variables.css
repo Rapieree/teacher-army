@@ -18,9 +18,14 @@
   --color-border-gray-2: rgba(5, 0, 11, 0.1);
   --color-background-sky: #EBEDFF;
 
-  /* viewports */
-  --max-width: 1920px;
-
   /* animation */
   --duration-fast: 0.3s;
+
+  /* resolution breakpoints in media expressions(max-width)
+  * max-desktop-width: 1920px
+  * middle-desktop-width: 1365px
+  * max-tablet-width: 1023px
+  * max-mobile-width: 767px
+  */
+
 }
