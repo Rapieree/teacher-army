@@ -10,7 +10,7 @@
 html,
 body {
   margin: 0 auto;
-  max-width: var(--max-width);
+  max-width: 1920px;
   font-family: "Inter", Arial, Helvetica, sans-serif;
   color: var(--color-main-text-dark);
   background-color: var(--color-white);
