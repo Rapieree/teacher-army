@@ -1,8 +1,8 @@
 import React, {useState} from "react";
 
 const Tabs = ({children, activeClass, activeTabLabel}) => {
-  const [nav] = React.Children.map(children, (child) => child.type.name === `TabsNav` ? child : undefined);
-  const contents = React.Children.map((children), (child) => child.type.name === `Tab` ? child : undefined);
+  const [nav] = React.Children.map(children, (child) => child.type.name === `TabsNav` ? child : null);
+  const contents = React.Children.map((children), (child) => child.type.name === `Tab` ? child : null);
 
   const [activeLabel, setActiveLabel] = useState(activeTabLabel);
 
@@ -22,7 +22,7 @@ const Tabs = ({children, activeClass, activeTabLabel}) => {
           onControlClick={onControlClick}
         />
       }
-      {React.Children.map(contents, (child) => child.props.label === activeLabel ? child : ``)}
+      {React.Children.map(contents, (child) => child.props.label === activeLabel ? child : null)}
     </>
   );
 };
