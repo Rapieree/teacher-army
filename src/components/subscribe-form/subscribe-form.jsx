@@ -1,16 +1,42 @@
 import CustomButton from "../custom-button/custom-button";
 import subscribeFormStyle from "./subscribe-form.module.css";
 
+const onFormSubmit = async (evt) => {
+  evt.preventDefault();
+
+  const res = await fetch(`http://localhost:3000/api/subscribe`,
+      {
+        body: JSON.stringify({
+          name: evt.target.name.value,
+          contacts: evt.target.contacts.value,
+          message: evt.target.message.value,
+        }),
+        headers: {
+          [`Content-Type`]: `application/json`,
+        },
+        method: `POST`,
+      },
+  );
+
+  const status = await res.status;
+
+  if (status === 200) {
+    evt.target.reset();
+  } else {
+    alert(`Error code ${status}`);
+  }
+};
+
 const SubscribeForm = ({className}) => {
   return (
     <div className={`${subscribeFormStyle.wrapper} ${className}`}>
-      <form>
+      <form action="http://localhost:3000/api/subscribe" onSubmit={onFormSubmit}>
         <label htmlFor="feedback-username">Ваше имя: *</label>
-        <input type="text" placeholder="Иван" id="feedback-username" minLength="3" maxLength="50"/>
+        <input type="text" placeholder="Иван" id="feedback-username" minLength="3" maxLength="50" name="name" required/>
         <label htmlFor="feedback-contacts">Контактные данные: *</label>
-        <input type="text" placeholder="Телеграм: @teacher-army" id="feedback-contacts" minLength="5" maxLength="50"/>
+        <input type="text" placeholder="Телеграм: @teacher-army" id="feedback-contacts" name="contacts" minLength="5" maxLength="50" required/>
         <label htmlFor="feedback-text">Сообщение:</label>
-        <textarea id="feedback-text"></textarea>
+        <textarea id="feedback-text" name="message"></textarea>
         <CustomButton type="submit">Отправить</CustomButton>
       </form>
     </div>
