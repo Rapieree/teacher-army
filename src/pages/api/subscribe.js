@@ -1,26 +1,29 @@
-const mongoose = require(`mongoose`);
+import {addFeedbackToDatabase} from "../../services/mongodb/api";
+import {feedbackValidator} from "../../utils/utils";
 
-// INSERT PASS FROM PASS STORE
-const CONNECT_MONGO_URL = `PASSWORD`;
+export const config = {
+  api: {
+    bodyParser: {
+      sizeLimit: `10kb`,
+    },
+  },
+};
 
 const handler = async (req, res) => {
-  let queries = {};
+  try {
+    if (req.method === `POST`) {
+      const queries = req.body;
 
-  if (req.method === `POST`) {
-    queries = req.body;
-    await mongoose.connect(CONNECT_MONGO_URL);
-
-    const Feedback = await mongoose.model(`feedbacks`);
-    await Feedback.insertMany({
-      name: queries.name,
-      contacts: queries.contacts,
-      message: queries.message,
-    });
-
-    await mongoose.disconnect();
-
-    res.status(200).send(`okey`);
-    console.log(queries);
+      if (feedbackValidator(queries)) {
+        await addFeedbackToDatabase(queries);
+        res.status(200).send({message: `ok`});
+        console.log(queries);
+      } else {
+        res.status(400).send({error: `Bad request`});
+      }
+    }
+  } catch (err) {
+    res.status(400).send({error: err.message});
   }
 };
 
