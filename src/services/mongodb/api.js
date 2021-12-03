@@ -6,7 +6,7 @@ const mongoose = require(`mongoose`);
 const CONNECT_MONGO_URL = `password`;
 
 // models
-const Feedback = mongoose.model(`feedbacks`, feedbackShema);
+export const Feedback = mongoose.model(`feedbacks`, feedbackShema);
 
 export const addFeedbackToDatabase = async (feedback) => {
   await mongoose.connect(CONNECT_MONGO_URL);

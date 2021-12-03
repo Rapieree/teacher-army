@@ -15,8 +15,9 @@ const onFormSubmit = async (evt) => {
   try {
     await sendFeedback(feedbackData);
     evt.target.reset();
+    alert(`Сообщение успешно отправлено!`);
   } catch (err) {
-    alert(err);
+    alert(err.message);
   }
 };
 

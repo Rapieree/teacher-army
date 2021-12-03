@@ -1,5 +1,4 @@
-import {addFeedbackToDatabase} from "../../services/mongodb/api";
-import {feedbackValidator} from "../../utils/utils";
+import {addFeedbackToDatabase, Feedback} from "../../services/mongodb/api";
 
 export const config = {
   api: {
@@ -13,8 +12,9 @@ const handler = async (req, res) => {
   try {
     if (req.method === `POST`) {
       const queries = req.body;
+      const feedback = new Feedback({queries});
 
-      if (feedbackValidator(queries)) {
+      if (feedback.validateSync()) {
         await addFeedbackToDatabase(queries);
         res.status(200).send({message: `ok`});
         console.log(queries);
@@ -23,7 +23,13 @@ const handler = async (req, res) => {
       }
     }
   } catch (err) {
-    res.status(400).send({error: err.message});
+    let errorMessage = ``;
+
+    for (let key in err.errors) {
+      errorMessage += `${err.errors[key].properties.message}. `;
+    }
+
+    res.status(400).send({error: errorMessage});
   }
 };
 
