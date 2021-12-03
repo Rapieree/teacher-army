@@ -1,8 +1,10 @@
 import React, {useState} from "react";
+import Tab from "./tab";
+import TabsNav from "./tabs-nav";
 
 const Tabs = ({children, activeClass, activeTabLabel}) => {
-  const [nav] = React.Children.map(children, (child) => child.type.name === `TabsNav` ? child : null);
-  const contents = React.Children.map((children), (child) => child.type.name === `Tab` ? child : null);
+  const [nav] = React.Children.map(children, (child) => child.type.name === TabsNav.name ? child : null);
+  const contents = React.Children.map((children), (child) => child.type.name === Tab.name ? child : null);
 
   const [activeLabel, setActiveLabel] = useState(activeTabLabel);
 

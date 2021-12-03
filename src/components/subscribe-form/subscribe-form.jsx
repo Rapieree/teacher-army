@@ -1,4 +1,3 @@
-import {useState} from "react";
 import {sendFeedback} from "../../api/client-api";
 import CustomButton from "../custom-button/custom-button";
 import subscribeFormStyle from "./subscribe-form.module.css";
@@ -22,8 +21,6 @@ const onFormSubmit = async (evt) => {
 };
 
 const SubscribeForm = ({className}) => {
-  const [isSuccessReq, setSuccessReq] = useState(false);
-
   return (
     <div className={`${subscribeFormStyle.wrapper} ${className}`}>
       <form action="http://localhost:3000/api/subscribe" onSubmit={onFormSubmit} autoComplete="off">

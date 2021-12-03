@@ -1,11 +1,22 @@
 import Layout from "../components/layout/layout";
+import {footerContent} from "../content/common/footer";
 
-const Prices = () => {
+const Prices = ({content}) => {
   return (
-    <Layout>
+    <Layout content={content}>
       <h1>Prices</h1>
     </Layout>
   );
+};
+
+export const getStaticProps = async () => {
+  return {
+    props: {
+      content: {
+        footer: footerContent,
+      },
+    }
+  };
 };
 
 export default Prices;
