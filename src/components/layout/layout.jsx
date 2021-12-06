@@ -5,7 +5,7 @@ import layoutStyle from "./layout.module.css";
 
 const MOBILE_DEV_MODE = false;
 
-const Layout = ({main, children, content}) => {
+const Layout = ({main, children, content, className}) => {
   return (
     <>
       <Head>
@@ -18,7 +18,7 @@ const Layout = ({main, children, content}) => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <div className={layoutStyle.layout}>
+      <div className={`${layoutStyle.layout} ${className}`}>
         {!main ? <Header className="container" /> : null}
 
         <main className={layoutStyle.main}>

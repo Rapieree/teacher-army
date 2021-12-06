@@ -1,9 +1,15 @@
 export const navsItems = [
   [`Home`, `/`],
+  [`Payment`, `/payment`],
   [`About`, `/about`],
   [`Contact`, `/contact`],
-  [`Prices`, `/prices`],
 ];
+
+export const LogoType = {
+  LIGHT: `light`,
+  DARK: `dark`,
+  VIOLET: `violet`,
+};
 
 export const StatusCode = {
   SUCCESS: 200,
