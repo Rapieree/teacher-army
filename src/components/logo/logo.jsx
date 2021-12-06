@@ -7,12 +7,14 @@ const Logo = ({light, className}) => {
     <div className={`${light ? `${logoStyle.logo} ${logoStyle.light}` : logoStyle.logo} ${className}`}>
       <Link href="/">
         <a>
-          <Image
-            src="/images/logo.svg"
-            width={160}
-            height={44}
-            alt="logo image"
-          />
+          <div className={logoStyle.image}>
+            <Image
+              src="/images/logo/teacher-army-logo-white.svg"
+              alt="logo image"
+              quality={100}
+              layout="fill"
+            />
+          </div>
         </a>
       </Link>
     </div>

@@ -1,5 +1,5 @@
 .subscribe {
-  padding: 66px;
+  padding: 50px;
   background-color: var(--color-background-dark-cream);
   border-radius: 30px;
   position: relative;
@@ -32,8 +32,8 @@
   text-align: center;
 }
 
-.title {
-  margin-bottom: 35px;
+.slogan {
+  margin-bottom: 20px;
   font-weight: 700;
   font-size: 1.25rem;
   line-height: 160%;
