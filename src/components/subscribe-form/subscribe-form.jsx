@@ -14,8 +14,10 @@ const onFormSubmit = async (evt) => {
   try {
     await sendFeedback(feedbackData);
     evt.target.reset();
-    alert(`Сообщение успешно отправлено!`);
+    // eslint-disable-next-line no-alert
+    alert(`Мы получили ваше сообщение и скоро с вами свяжемся!`);
   } catch (err) {
+    // eslint-disable-next-line no-alert
     alert(err.message);
   }
 };
@@ -23,7 +25,7 @@ const onFormSubmit = async (evt) => {
 const SubscribeForm = ({className}) => {
   return (
     <div className={`${subscribeFormStyle.wrapper} ${className}`}>
-      <form action="http://localhost:3000/api/subscribe" onSubmit={onFormSubmit} autoComplete="off">
+      <form onSubmit={onFormSubmit} autoComplete="off">
         <label htmlFor="feedback-username">Ваше имя: *</label>
         <input type="text" placeholder="Иван" id="feedback-username" minLength="3" maxLength="50" name="name" required/>
         <label htmlFor="feedback-contacts">Контактные данные: *</label>

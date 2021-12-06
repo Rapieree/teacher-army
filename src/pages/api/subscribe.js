@@ -1,4 +1,6 @@
-import {addFeedbackToDatabase, Feedback} from "../../services/mongodb/api";
+import connectDB from "../../middleware/mongodb";
+import Feedback from "../../models/feedback";
+import {StatusCode} from "../../utils/const";
 
 export const config = {
   api: {
@@ -9,30 +11,33 @@ export const config = {
 };
 
 const handler = async (req, res) => {
-  try {
-    if (req.method === `POST`) {
-      const queries = req.body;
-      const feedback = new Feedback({queries});
+  let errorMessage = ``;
+  let errorStatusCode = 0;
+
+  if (req.method === `POST`) {
+    try {
+      const {name, contacts, message} = req.body;
+      const feedback = new Feedback({name, contacts, message});
 
       feedback.validateSync();
-      await addFeedbackToDatabase(queries);
-      res.status(200).send({message: `ok`});
-    }
-  } catch (err) {
-    let errorMessage = ``;
-
-    if (err.name === `ValidationError`) {
-      for (let key in err.errors) {
-        if (err.errors.hasOwnProperty(key)) {
-          errorMessage += `${err.errors[key].properties.message}. `;
+      await feedback.save();
+      res.status(StatusCode.SUCCESS).send({message: `ok`});
+    } catch (err) {
+      if (err.name === `ValidationError`) {
+        errorStatusCode = StatusCode.CLIENT_ERROR;
+        for (let key in err.errors) {
+          if (err.errors.hasOwnProperty(key)) {
+            errorMessage += `${err.errors[key].properties.message}. `;
+          }
         }
+      } else {
+        errorStatusCode = StatusCode.SERVER_ERROR;
+        errorMessage = `Непредвиденная ошибка на сервере`;
       }
-    } else {
-      errorMessage = `Непредвиденная ошибка на сервере`;
-    }
 
-    res.status(400).send({error: errorMessage});
+      res.status(errorStatusCode).send({error: errorMessage});
+    }
   }
 };
 
-export default handler;
+export default connectDB(handler);

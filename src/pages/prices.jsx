@@ -9,13 +9,13 @@ const Prices = ({content}) => {
   );
 };
 
-export const getStaticProps = async () => {
+export const getStaticProps = () => {
   return {
     props: {
       content: {
         footer: footerContent,
       },
-    }
+    },
   };
 };
 

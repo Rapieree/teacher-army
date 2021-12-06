@@ -1,40 +1,11 @@
-const feedbackModel = {
-  name: 50,
-  contacts: 200,
-  message: 2000,
+export const getMinLengthValidationShemaProp = (field, length) => {
+  return [length, `Введите не менее ${length} символов в поле '${field}'`];
 };
 
-const checkKeysObjects = (obj, objModel) => {
-  const keysObj = Object.keys(obj);
-  const keysModel = Object.keys(objModel);
-
-  if (keysObj.length !== keysModel.length) {
-    return false;
-  }
-
-  for (let key of keysModel) {
-    if (!keysObj.includes(key)) {
-      return false;
-    }
-  }
-
-  return true;
+export const getMaxLengthValidationShemaProp = (field, length) => {
+  return [length, `Максимальная длина поля '${field}' - ${length} символов`];
 };
 
-const checkPropsLengths = (obj, sizeMap) => {
-  for (let key in obj) {
-    if (obj[key].length > Number(sizeMap[key])) {
-      return false;
-    }
-  }
-
-  return true;
-};
-
-export const feedbackValidator = (feedbackData) => {
-  return (
-    checkKeysObjects(feedbackData, feedbackModel) && checkPropsLengths(feedbackData, feedbackModel)
-      ? true
-      : false
-  );
+export const getRequiredValidationShemaProp = (field, isRequired) => {
+  return [isRequired, `Поле ${field} - обязательно для заполнения`];
 };
