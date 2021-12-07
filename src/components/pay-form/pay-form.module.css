@@ -1,0 +1,17 @@
+.payForm {
+  margin-bottom: 100px;
+  padding: 30px;
+  width: 400px;
+  border: 1px solid var(--color-border-gray-2);
+  border-radius: 5px;
+}
+
+.payForm input {
+  padding: 12px 30px;
+  border-radius: 5px;
+  border: 1px solid var(--color-border-gray-1);
+}
+
+.block {
+  margin-bottom: 20px;
+}

@@ -1,5 +1,5 @@
 import connectDB from "../../middleware/mongodb";
-import Feedback from "../../models/feedback";
+import {Feedback} from "../../models/feedback";
 import {StatusCode} from "../../utils/const";
 
 export const config = {

@@ -1,7 +1,6 @@
 import {getMaxLengthValidationShemaProp, getMinLengthValidationShemaProp, getRequiredValidationShemaProp} from "../utils/utils";
 import mongoose from "mongoose";
 
-
 const feedbackValidOptions = {
   name: {
     type: String,
@@ -19,15 +18,21 @@ const feedbackValidOptions = {
     type: String,
     maxLength: getMaxLengthValidationShemaProp(`message`, 2000),
     required: false,
-  }
+  },
 };
 
 const feedbackShema = new mongoose.Schema({
   name: feedbackValidOptions.name,
   contacts: feedbackValidOptions.contacts,
   message: feedbackValidOptions.message,
+  timeGMT: {
+    type: Date,
+    default: new Date(),
+  },
+  timeRus: {
+    type: String,
+    default: new Date().toLocaleString(`ru-Ru`, {timeZone: `Europe/Moscow`}),
+  }
 });
 
-const Feedback = mongoose.models.Feedback || mongoose.model(`feedback`, feedbackShema);
-
-export default Feedback;
+export const Feedback = mongoose.models.feedback || mongoose.model(`feedback`, feedbackShema);
