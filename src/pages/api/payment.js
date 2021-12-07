@@ -4,7 +4,7 @@ import connectDB from "../../middleware/mongodb";
 import {Payment} from "../../models/payment";
 
 // key from magazine
-const KEY = ``;
+const KEY = `key`;
 
 const handler = async (req, res) => {
   console.log(req);
@@ -32,7 +32,7 @@ const handler = async (req, res) => {
       try {
         if (String(controlHash) === String(MNT_SIGNATURE)) {
           const payment = new Payment({
-            email: MNT_CUSTOM1,
+            email: MNT_CUSTOM1 || ``,
             payData: {
               MNT_ID,
               MNT_TRANSACTION_ID,
