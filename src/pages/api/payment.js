@@ -9,8 +9,6 @@ const KEY = `key`;
 const handler = async (req, res) => {
   console.log(req);
   console.log(req.query);
-  console.log(req.body);
-  console.log(req.cookies);
 
   if (req.method === `GET`) {
     const queries = req.query;
@@ -23,16 +21,18 @@ const handler = async (req, res) => {
         MNT_CURRENCY_CODE,
         MNT_TEST_MODE,
         MNT_SIGNATURE,
-        MNT_CUSTOM1,
+        MNT_SUBSCRIBER_ID,
       } = queries;
 
-      const hashString = MNT_ID + MNT_TRANSACTION_ID + MNT_OPERATION_ID + MNT_AMOUNT + MNT_CURRENCY_CODE + MNT_TEST_MODE + KEY;
+      const hashString = MNT_ID + MNT_TRANSACTION_ID + MNT_OPERATION_ID + MNT_AMOUNT + MNT_CURRENCY_CODE + MNT_SUBSCRIBER_ID + MNT_TEST_MODE + KEY;
       const controlHash = crypto.createHash(`md5`).update(hashString).digest(`hex`);
 
       try {
         if (String(controlHash) === String(MNT_SIGNATURE)) {
           const payment = new Payment({
-            email: MNT_CUSTOM1 || ``,
+            email: MNT_SUBSCRIBER_ID || ``,
+            timeRus: new Date().toLocaleString(`ru-Ru`, {timeZone: `Europe/Moscow`}),
+            timeGMT: new Date(),
             payData: {
               MNT_ID,
               MNT_TRANSACTION_ID,

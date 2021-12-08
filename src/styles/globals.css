@@ -37,6 +37,12 @@ a {
   clip: rect(0 0 0 0);
 }
 
+.title-page {
+  margin-bottom: 60px;
+  font-size: 3rem;
+  text-align: center;
+}
+
 .mrgb-120 {
   margin-bottom: 120px;
 }

@@ -8,24 +8,13 @@
   text-align: left;
 }
 
-.wrapper label {
-  display: inline-block;
-  margin-left: 5px;
-  margin-bottom: 5px;
-  font-weight: 500;
-  font-size: 1rem;
-  line-height: 160%;
-  color: var(--color-main-text-dark);
-  opacity: 0.8;
-}
-
-.wrapper input,
 .wrapper textarea {
   margin-bottom: 15px;
   padding: 12px 30px 12px 30px;
   display: block;
   width: 100%;
   border: 1px solid rgba(66, 82, 207, 0.1);
+  border-radius: 5px;
   font-weight: 500;
   font-size: 1.25rem;
   line-height: 160%;
@@ -35,26 +24,26 @@
   transition: all var(--duration-fast);
 }
 
+.wrapper input {
+  margin-bottom: 15px;
+}
+
 .wrapper textarea {
   height: 130px;
   resize: none;
 }
 
-.wrapper input:hover {
+.wrapper textarea:hover {
   opacity: 1;
+  border-color: rgba(66, 82, 207, 0.3);
 }
 
-.wrapper input::placeholder,
 .wrapper textarea::placeholder {
   font-weight: 500;
   font-size: 1.25rem;
   line-height: 160%;
   color: var(--color-text-gray);
   transition: color var(--duration-fast);
-}
-
-.wrapper input:hover::placeholder {
-  color: inherit;
 }
 
 .wrapper button {

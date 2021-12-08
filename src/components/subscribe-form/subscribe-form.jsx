@@ -1,5 +1,7 @@
 import {sendFeedback} from "../../api/client-api";
 import CustomButton from "../custom-button/custom-button";
+import CustomInput from "../custom-input/custom-input";
+import CustomLabel from "../custom-label/custom-label";
 import subscribeFormStyle from "./subscribe-form.module.css";
 
 const onFormSubmit = async (evt) => {
@@ -26,11 +28,11 @@ const SubscribeForm = ({className}) => {
   return (
     <div className={`${subscribeFormStyle.wrapper} ${className}`}>
       <form onSubmit={onFormSubmit} autoComplete="off">
-        <label htmlFor="feedback-username">Ваше имя: *</label>
-        <input type="text" placeholder="Иван" id="feedback-username" minLength="1" maxLength="50" name="name" required/>
-        <label htmlFor="feedback-contacts">Контактные данные: *</label>
-        <input type="text" placeholder="Телеграм: @Ivan" id="feedback-contacts" name="contacts" minLength="1" maxLength="200" required/>
-        <label htmlFor="feedback-text">Сообщение:</label>
+        <CustomLabel htmlFor="feedback-username">Ваше имя: *</CustomLabel>
+        <CustomInput type="text" placeholder="Иван" id="feedback-username" minLength="1" maxLength="50" name="name" required/>
+        <CustomLabel htmlFor="feedback-contacts">Контактные данные: *</CustomLabel>
+        <CustomInput type="text" placeholder="Телеграм: @Ivan" id="feedback-contacts" name="contacts" minLength="1" maxLength="200" required/>
+        <CustomLabel htmlFor="feedback-text">Сообщение:</CustomLabel>
         <textarea id="feedback-text" name="message" placeholder="Хочу учиться" maxLength="2000"></textarea>
         <CustomButton type="submit">Отправить</CustomButton>
       </form>

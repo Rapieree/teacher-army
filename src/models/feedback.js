@@ -27,11 +27,9 @@ const feedbackShema = new mongoose.Schema({
   message: feedbackValidOptions.message,
   timeGMT: {
     type: Date,
-    default: new Date(),
   },
   timeRus: {
     type: String,
-    default: new Date().toLocaleString(`ru-Ru`, {timeZone: `Europe/Moscow`}),
   }
 });
 

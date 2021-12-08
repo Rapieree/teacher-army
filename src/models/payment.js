@@ -3,11 +3,9 @@ import mongoose from "mongoose";
 const paymentShema = new mongoose.Schema({
   timeGMT: {
     type: Date,
-    default: new Date(),
   },
   timeRus: {
     type: String,
-    default: new Date().toLocaleString(`ru-Ru`, {timeZone: `Europe/Moscow`}),
   },
   email: String,
   payData: {

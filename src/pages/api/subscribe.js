@@ -17,7 +17,13 @@ const handler = async (req, res) => {
   if (req.method === `POST`) {
     try {
       const {name, contacts, message} = req.body;
-      const feedback = new Feedback({name, contacts, message});
+      const feedback = new Feedback({
+        name,
+        contacts,
+        message,
+        timeRus: new Date().toLocaleString(`ru-Ru`, {timeZone: `Europe/Moscow`}),
+        timeGMT: new Date(),
+      });
 
       feedback.validateSync();
       await feedback.save();
