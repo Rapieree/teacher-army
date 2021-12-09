@@ -10,7 +10,6 @@ const Features = ({className, content}) => {
           <h2 className={featuresStyle.title}>{content.title}</h2>
           <p className={featuresStyle.description}>{content.description}</p>
         </div>
-
         {
           content.featuresList.map((card) => {
             return (

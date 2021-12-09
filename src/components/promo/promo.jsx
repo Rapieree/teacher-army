@@ -6,7 +6,7 @@ import CustomButton from "../custom-button/custom-button";
 const Promo = ({className, content}) => {
   return (
     <section className={`${promoStyle.promo} ${className}`}>
-      <Header className={promoStyle.header} light />
+      <Header className={promoStyle.header} />
 
       <div className={promoStyle.wrapper}>
         <div className={promoStyle.block}>

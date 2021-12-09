@@ -8,14 +8,16 @@ import paymentPageStyle from "../styles/payment-page.module.css";
 
 const payTariffs = [
   {
-    name: `tariff-simple`,
+    idName: `tariff-simple`,
+    name: `Тарифф Simple`,
     price: 1.00,
-    description: `Тарифф Simple`,
+    description: `Оплата по тарифу Simple (одно занятие) в Teacher-Army.`,
   },
   {
-    name: `tariff-smart`,
+    idName: `tariff-smart`,
+    name: `Тарифф Smart`,
     price: 4.00,
-    description: `Тарифф Smart`,
+    description: `Оплата по тарифу Smart (четыре занятия) в Teacher-Army.`,
   },
 ];
 

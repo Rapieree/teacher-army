@@ -2,8 +2,11 @@ export const navsItems = [
   [`Home`, `/`],
   [`Payment`, `/payment`],
   [`About`, `/about`],
-  [`Contact`, `/contact`],
+  [`Contacts`, `/contact`],
+  [`FAQ`, `/faq`],
 ];
+
+export const CLIENT_END_POINT = `http://localhost:3000`;
 
 export const LogoType = {
   LIGHT: `light`,

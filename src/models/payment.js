@@ -8,6 +8,8 @@ const paymentShema = new mongoose.Schema({
     type: String,
   },
   email: String,
+  tariff: String,
+  numberPhone: String,
   payData: {
     MNT_ID: String,
     MNT_TRANSACTION_ID: String,

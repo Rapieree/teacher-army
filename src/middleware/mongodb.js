@@ -1,7 +1,7 @@
 import mongoose from 'mongoose';
 
 // INSERT PASS FROM PASS STORE
-const CONNECT_MONGO_URL = `password`;
+const CONNECT_MONGO_URL = process.env.CONNECT_MONGO_URL;
 
 const connectDB = (handler) => async (req, res) => {
   if (mongoose.connections[0].readyState) {

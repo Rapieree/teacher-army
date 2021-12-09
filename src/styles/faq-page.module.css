@@ -1,0 +1,39 @@
+.wrapper {
+  margin: 0 auto;
+  max-width: 800px;
+  border: 1px solid var(--color-border-gray-2);
+  border-radius: 10px;
+}
+
+.list {
+  padding: 30px;
+  list-style-type: none;
+}
+
+.item {
+}
+
+.question {
+  margin-bottom: 5px;
+}
+
+.question::before {
+  content: "Q. ";
+  font-size: 1.25em;
+  color: var(--color-special);
+}
+
+.answer {
+  padding-left: 45px;
+}
+
+.answer::before {
+  content: "A. ";
+  font-size: 1.25em;
+  font-weight: bold;
+  color: var(--color-special);
+}
+
+.hr {
+  margin: 10px 0;
+}

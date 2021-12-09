@@ -19,7 +19,7 @@ const Layout = ({main, children, content, className}) => {
       </Head>
 
       <div className={`${layoutStyle.layout} ${className}`}>
-        {!main ? <Header className="container" /> : null}
+        {!main ? <Header className="container" light /> : null}
 
         <main className={layoutStyle.main}>
           <h1 className="visually-hidden"></h1>

@@ -4,7 +4,7 @@ import connectDB from "../../middleware/mongodb";
 import {Payment} from "../../models/payment";
 
 // key from magazine
-const KEY = `key`;
+const KEY = process.env.KEY_MAGAZINE;
 
 const handler = async (req, res) => {
   console.log(req);
@@ -23,6 +23,8 @@ const handler = async (req, res) => {
         MNT_SIGNATURE,
         MNT_SUBSCRIBER_ID,
       } = queries;
+      const tariff = queries[`tariff`];
+      const numberPhone = queries[`number-phone`];
 
       const hashString = MNT_ID + MNT_TRANSACTION_ID + MNT_OPERATION_ID + MNT_AMOUNT + MNT_CURRENCY_CODE + MNT_SUBSCRIBER_ID + MNT_TEST_MODE + KEY;
       const controlHash = crypto.createHash(`md5`).update(hashString).digest(`hex`);
@@ -31,6 +33,8 @@ const handler = async (req, res) => {
         if (String(controlHash) === String(MNT_SIGNATURE)) {
           const payment = new Payment({
             email: MNT_SUBSCRIBER_ID || ``,
+            tariff,
+            numberPhone,
             timeRus: new Date().toLocaleString(`ru-Ru`, {timeZone: `Europe/Moscow`}),
             timeGMT: new Date(),
             payData: {
