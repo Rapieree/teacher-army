@@ -13,9 +13,6 @@
   list-style-type: none;
 }
 
-.item {
-}
-
 .question {
   padding-left: 1.4em;
   margin-bottom: 5px;
@@ -50,10 +47,6 @@
 
 /* feedback */
 
-.feedback {
-
-}
-
 .feedbackTitle {
   margin-bottom: 15px;
 }
@@ -71,44 +64,4 @@
   margin: 0 auto;
   max-width: 600px;
   width: 100%;
-}
-
-/* Telegram button */
-
-.hr {
-  margin: 25px 0;
-}
-
-.extraSeparatorText {
-  font-size: 1.5rem;
-  font-weight: 600;
-  margin-bottom: 20px;
-  text-align: center;
-}
-
-.telegramButton {
-  margin: 0 auto;
-  padding-left: 25px;
-  padding-right: 25px;
-  width: auto;
-  max-width: none;
-  position: relative;
-  background-color: var(--color-accent);
-  display: flex;
-  align-items: center;
-}
-
-.telegramButton:hover,
-.telegramButton:focus {
-  background-color: var(--color-accent);
-  opacity: 0.9;
-}
-
-.telegramButton:active {
-  background-color: var(--color-accent);
-  opacity: 0.8;
-}
-
-.telegramIcon {
-  margin-right: 10px;
 }

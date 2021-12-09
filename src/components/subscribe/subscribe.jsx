@@ -8,7 +8,7 @@ const Subscribe = ({className, content}) => {
       <div className={subscribeStyle.block}>
         <p className={subscribeStyle.slogan}>{content.slogan}</p>
         <p className={subscribeStyle.description}>{content.description}</p>
-        <SubscribeForm />
+        <SubscribeForm showExtraContacts={true} />
       </div>
     </section>
   );

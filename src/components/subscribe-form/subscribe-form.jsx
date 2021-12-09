@@ -1,3 +1,4 @@
+import {ReactSVG} from "react-svg";
 import {sendFeedback} from "../../api/client-api";
 import CustomButton from "../custom-button/custom-button";
 import CustomInput from "../custom-input/custom-input";
@@ -24,7 +25,7 @@ const onFormSubmit = async (evt) => {
   }
 };
 
-const SubscribeForm = ({className, children}) => {
+const SubscribeForm = ({className, showExtraContacts = false}) => {
   return (
     <div className={`${subscribeFormStyle.wrapper} ${className}`}>
       <form onSubmit={onFormSubmit} autoComplete="off">
@@ -36,7 +37,28 @@ const SubscribeForm = ({className, children}) => {
         <textarea id="feedback-text" name="message" placeholder="Хочу учиться" maxLength="2000"></textarea>
         <CustomButton type="submit">Отправить</CustomButton>
       </form>
-      {children}
+      {
+        showExtraContacts
+          ? (
+            <div className={subscribeFormStyle.extra}>
+              <hr className={subscribeFormStyle.hr} />
+              <p className={subscribeFormStyle.extraSeparatorText}>Или</p>
+              <a href="https://t.me/kicumkicum" target="_blank" rel="noreferrer">
+                <CustomButton className={subscribeFormStyle.telegramButton}>
+                  <ReactSVG
+                    src="images/svg/icon-telegram.svg"
+                    className={subscribeFormStyle.telegramIcon}
+                    width={25}
+                    height={21}
+                    wrapper="svg"
+                  />
+                Написать в Telegram
+                </CustomButton>
+              </a>
+            </div>
+          )
+          : null
+      }
     </div>
   );
 };

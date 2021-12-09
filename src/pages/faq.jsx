@@ -1,5 +1,3 @@
-import {ReactSVG} from "react-svg";
-import CustomButton from "../components/custom-button/custom-button";
 import Layout from "../components/layout/layout";
 import SubscribeForm from "../components/subscribe-form/subscribe-form";
 import {footerContent} from "../content/common/footer";
@@ -52,24 +50,7 @@ const Faq = ({content}) => {
         <div className={`${faqPageStyle.feedback} mrgb-120`}>
           <h2 className={`subtitle-page ${faqPageStyle.feedbackTitle}`}>Не нашли ответы на интересующие вопросы?</h2>
           <p className={`subtitle-page ${faqPageStyle.feedbackSubtitle}`}>Задайте их через форму, и мы с вами свяжемся в ближайшее время</p>
-          <SubscribeForm className={faqPageStyle.feedbackForm}>
-            <div className={faqPageStyle.extra}>
-              <hr className={faqPageStyle.hr} />
-              <p className={faqPageStyle.extraSeparatorText}>Или</p>
-              <a href="https://t.me/kicumkicum" target="_blank" rel="noreferrer">
-                <CustomButton className={faqPageStyle.telegramButton}>
-                  <ReactSVG
-                    src="images/svg/icon-telegram.svg"
-                    className={faqPageStyle.telegramIcon}
-                    width={25}
-                    height={21}
-                    wrapper="svg"
-                  />
-                Написать в Telegram
-                </CustomButton>
-              </a>
-            </div>
-          </SubscribeForm>
+          <SubscribeForm className={faqPageStyle.feedbackForm} showExtraContacts={true}/>
         </div>
       </div>
     </Layout>
