@@ -30,8 +30,9 @@
 }
 
 .whoNeeds > div > div:first-child {
+  margin-bottom: 30px;
   padding-top: 30px;
   grid-row: 1;
-  grid-column: 2 / -1;;
-  text-align: right;
+  grid-column: 1 / -1;;
+  text-align: center;
 }

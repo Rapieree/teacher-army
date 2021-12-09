@@ -24,7 +24,7 @@ const onFormSubmit = async (evt) => {
   }
 };
 
-const SubscribeForm = ({className}) => {
+const SubscribeForm = ({className, children}) => {
   return (
     <div className={`${subscribeFormStyle.wrapper} ${className}`}>
       <form onSubmit={onFormSubmit} autoComplete="off">
@@ -36,6 +36,7 @@ const SubscribeForm = ({className}) => {
         <textarea id="feedback-text" name="message" placeholder="Хочу учиться" maxLength="2000"></textarea>
         <CustomButton type="submit">Отправить</CustomButton>
       </form>
+      {children}
     </div>
   );
 };
