@@ -1,5 +1,4 @@
 import {useState} from "react";
-import {CLIENT_END_POINT} from "../../utils/const";
 import CustomButton from "../custom-button/custom-button";
 import CustomInput from "../custom-input/custom-input";
 import CustomLabel from "../custom-label/custom-label";
