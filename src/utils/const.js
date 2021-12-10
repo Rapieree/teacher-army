@@ -6,7 +6,7 @@ export const navsItems = [
   [`FAQ`, `/faq`],
 ];
 
-export const CLIENT_END_POINT = `http://localhost:3000`;
+export const CLIENT_END_POINT = process.env.CLIENT_END_POINT || `http://localhost:3000`;
 
 export const LogoType = {
   LIGHT: `light`,
