@@ -65,7 +65,7 @@ const PayForm = ({className, getCurrentTariff, payTariffs}) => {
           name="MNT_DESCRIPTION"
           defaultValue={`${currentTariff.description} Данные плательщика: email: ${email}; Телефон: ${phone}.`}
         />
-        <input type="hidden" name="MNT_SUCCESS_URL" defaultValue={`${CLIENT_END_POINT}/about`} />
+        <input type="hidden" name="MNT_SUCCESS_URL" defaultValue={`${window.location.origin}/about`} />
       </form>
     </div>
   );
