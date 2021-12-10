@@ -1,6 +1,6 @@
 .wrapper {
-  padding: 20px 50px;
-  border: 1px solid var(--color-border-gray-2);
+  padding: 40px 50px;
+  border: 1px solid var(--color-border-blue-1);
   border-radius: 4px;
 }
 
@@ -8,24 +8,13 @@
   text-align: left;
 }
 
-.wrapper label {
-  display: inline-block;
-  margin-left: 5px;
-  margin-bottom: 5px;
-  font-weight: 500;
-  font-size: 1rem;
-  line-height: 160%;
-  color: var(--color-main-text-dark);
-  opacity: 0.8;
-}
-
-.wrapper input,
 .wrapper textarea {
   margin-bottom: 15px;
   padding: 12px 30px 12px 30px;
   display: block;
   width: 100%;
-  border: 1px solid rgba(66, 82, 207, 0.1);
+  border: 1px solid var(--color-border-blue-1);
+  border-radius: 5px;
   font-weight: 500;
   font-size: 1.25rem;
   line-height: 160%;
@@ -35,16 +24,21 @@
   transition: all var(--duration-fast);
 }
 
+.wrapper input {
+  margin-bottom: 15px;
+}
+
 .wrapper textarea {
-  height: 130px;
+  height: 160px;
   resize: none;
+  line-height: 100%;
 }
 
-.wrapper input:hover {
+.wrapper textarea:hover {
   opacity: 1;
+  border-color: rgba(66, 82, 207, 0.8);
 }
 
-.wrapper input::placeholder,
 .wrapper textarea::placeholder {
   font-weight: 500;
   font-size: 1.25rem;
@@ -53,15 +47,52 @@
   transition: color var(--duration-fast);
 }
 
-.wrapper input:hover::placeholder {
-  color: inherit;
-}
-
-.wrapper button {
+.wrapper button[type="submit"] {
   margin: 0 auto;
   display: flex;
   justify-content: center;
   align-items: center;
   width: 184px;
   height: 100%;
+}
+
+/* Telegram button */
+
+.hr {
+  margin: 25px 0;
+}
+
+.extraSeparatorText {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 20px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.telegramButton {
+  margin: 0 auto;
+  padding-left: 25px;
+  padding-right: 25px;
+  width: auto;
+  max-width: none;
+  position: relative;
+  background-color: var(--color-accent);
+  display: flex;
+  align-items: center;
+}
+
+.telegramButton:hover,
+.telegramButton:focus {
+  background-color: var(--color-accent);
+  opacity: 0.9;
+}
+
+.telegramButton:active {
+  background-color: var(--color-accent);
+  opacity: 0.8;
+}
+
+.telegramIcon {
+  margin-right: 10px;
 }

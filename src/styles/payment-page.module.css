@@ -1,0 +1,44 @@
+.tariffs {
+  min-height: 500px;
+  position: relative;
+  z-index: 0;
+}
+
+.tariffs::before {
+  content: "";
+  width: 100%;
+  height: 500px;
+  background-color: var(--color-background-sky);
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+.payBlock {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 50px;
+  justify-content: center;
+}
+
+.tariffCard {
+  width: 100%;
+  max-width: 400px;
+  font-size: 0.9rem;
+  border: 2px solid var(--color-accent);
+}
+
+.payForm {
+  margin-left: auto;
+  width: 100%;
+  max-width: 400px;
+}
+
+.tariffCard button {
+  display: none;
+}
+
+.payForm form {
+  justify-content: center;
+}

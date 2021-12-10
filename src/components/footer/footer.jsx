@@ -1,3 +1,4 @@
+import {LogoType} from "../../utils/const";
 import LinksList from "../linksList/links-list";
 import Logo from "../logo/logo";
 import Socials from "../socials/socials";
@@ -7,7 +8,7 @@ const Footer = ({className, content}) => {
   return (
     <footer className={`${footerStyle.footer} ${className}`}>
       <div className={footerStyle.block}>
-        <Logo light className={footerStyle.logo}/>
+        <Logo type={LogoType.LIGHT} className={footerStyle.logo}/>
         <Socials content={content.socials} />
       </div>
       <div className={`${footerStyle.linksBlock}`}>

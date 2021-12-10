@@ -1,5 +1,8 @@
+import {ReactSVG} from "react-svg";
 import {sendFeedback} from "../../api/client-api";
 import CustomButton from "../custom-button/custom-button";
+import CustomInput from "../custom-input/custom-input";
+import CustomLabel from "../custom-label/custom-label";
 import subscribeFormStyle from "./subscribe-form.module.css";
 
 const onFormSubmit = async (evt) => {
@@ -22,18 +25,40 @@ const onFormSubmit = async (evt) => {
   }
 };
 
-const SubscribeForm = ({className}) => {
+const SubscribeForm = ({className, showExtraContacts = false}) => {
   return (
     <div className={`${subscribeFormStyle.wrapper} ${className}`}>
       <form onSubmit={onFormSubmit} autoComplete="off">
-        <label htmlFor="feedback-username">Ваше имя: *</label>
-        <input type="text" placeholder="Иван" id="feedback-username" minLength="1" maxLength="50" name="name" required/>
-        <label htmlFor="feedback-contacts">Контактные данные: *</label>
-        <input type="text" placeholder="Телеграм: @Ivan" id="feedback-contacts" name="contacts" minLength="1" maxLength="200" required/>
-        <label htmlFor="feedback-text">Сообщение:</label>
+        <CustomLabel htmlFor="feedback-username">Ваше имя: *</CustomLabel>
+        <CustomInput type="text" placeholder="Иван" id="feedback-username" minLength="1" maxLength="50" name="name" required/>
+        <CustomLabel htmlFor="feedback-contacts">Контактные данные: *</CustomLabel>
+        <CustomInput type="text" placeholder="Телеграм: @Ivan" id="feedback-contacts" name="contacts" minLength="1" maxLength="200" required/>
+        <CustomLabel htmlFor="feedback-text">Сообщение:</CustomLabel>
         <textarea id="feedback-text" name="message" placeholder="Хочу учиться" maxLength="2000"></textarea>
         <CustomButton type="submit">Отправить</CustomButton>
       </form>
+      {
+        showExtraContacts
+          ? (
+            <div className={subscribeFormStyle.extra}>
+              <hr className={subscribeFormStyle.hr} />
+              <p className={subscribeFormStyle.extraSeparatorText}>Или</p>
+              <a href="https://t.me/kicumkicum" target="_blank" rel="noreferrer">
+                <CustomButton className={subscribeFormStyle.telegramButton}>
+                  <ReactSVG
+                    src="images/svg/icon-telegram.svg"
+                    className={subscribeFormStyle.telegramIcon}
+                    width={25}
+                    height={21}
+                    wrapper="svg"
+                  />
+                Написать в Telegram
+                </CustomButton>
+              </a>
+            </div>
+          )
+          : null
+      }
     </div>
   );
 };

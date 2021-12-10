@@ -1,0 +1,18 @@
+.label {
+  display: inline-block;
+  font-weight: 500;
+  font-size: 1.2rem;
+  line-height: 160%;
+  color: var(--color-main-text-dark);
+  opacity: 0.8;
+}
+
+.description {
+  margin-left: 5px;
+  margin-bottom: 10px;
+}
+
+.label:hover {
+  opacity: 1;
+  cursor: pointer;
+}

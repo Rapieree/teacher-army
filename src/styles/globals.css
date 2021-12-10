@@ -13,7 +13,7 @@ body {
   max-width: 1920px;
   font-family: "Inter", Arial, Helvetica, sans-serif;
   color: var(--color-main-text-dark);
-  background-color: var(--color-white);
+  background-color: var(--color-background-cream);
   font-size: 16px;
 }
 
@@ -37,8 +37,24 @@ a {
   clip: rect(0 0 0 0);
 }
 
+.title-page {
+  margin-bottom: 120px;
+  font-size: 3.5rem;
+  text-align: center;
+}
+
+.subtitle-page {
+  margin-bottom: 25px;
+  font-size: 2rem;
+  text-align: center;
+}
+
 .mrgb-120 {
   margin-bottom: 120px;
+}
+
+.mrgb-80 {
+  margin-bottom: 80px;
 }
 
 @media screen and (max-width: 1365px) {

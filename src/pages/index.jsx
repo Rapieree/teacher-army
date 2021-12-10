@@ -21,6 +21,8 @@ const Main = ({content}) => {
 
       <Idea className="container mrgb-120" content={content.idea} />
 
+      <Features className={`container mrgb-120 ${mainPageStyle.whoNeeds}`} content={content.features}/>
+
       <div className={mainPageStyle.statistics}>
         <Statistics className="container mrgb-120" content={content.statistics} />
       </div>

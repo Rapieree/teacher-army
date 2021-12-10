@@ -1,10 +1,10 @@
 import {footerContent} from "../common/footer";
+import {tariffsContent} from "../common/tariffs";
 import {featuresContent} from "./blocks/features";
 import {ideaContent} from "./blocks/idea";
 import {promoContent} from "./blocks/promo";
 import {statisticsContent} from "./blocks/statistics";
 import {subscribeContent} from "./blocks/subscribe";
-import {tariffsContent} from "./blocks/tariffs";
 import {techsContent} from "./blocks/techs";
 import {userReviewsContent} from "./blocks/user-reviews";
 

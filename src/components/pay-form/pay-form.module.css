@@ -1,0 +1,102 @@
+.payForm {
+  padding: 30px;
+  width: 100%;
+  border: 1px solid var(--color-border-blue-1);
+  border-radius: 5px;
+}
+
+.payForm > form {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.payButton {
+  max-width: 250px;
+  width: 100%;
+  margin-top: auto;
+  display: flex;
+  justify-content: center;
+}
+
+.payForm input {
+  padding: 12px 30px;
+  border-radius: 5px;
+  border: 1px solid var(--color-border-blue-1);
+}
+
+.block {
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+.tariffsList {
+  max-width: max-content;
+  list-style-type: none;
+  display: grid;
+  row-gap: 25px;
+  text-align: left;
+}
+
+.tariffRadioItem > input[type="radio"] + label {
+  padding-top: 0.2em;
+  padding-bottom: 0.2em;
+  padding-left: 2em;
+  position: relative;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 1.5rem;
+  opacity: 0.7;
+}
+
+/*
+Возможный фокус с клавиатуры
+.tariffRadioItem > input[type="radio"]:focus + label {
+  box-shadow: 0px 0px 0px 1px rgba(34, 60, 80, 1);
+} */
+
+.tariffRadioItem > input[type="radio"] + label::before {
+  content: "";
+  width: 1.5em;
+  height: 1.5em;
+  border-radius: 50%;
+  border: 1px solid var(--color-border-blue-1);
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.tariffRadioItem > input[type="radio"]:checked + label {
+  opacity: 1;
+}
+
+.tariffRadioItem > input[type="radio"]:hover + label {
+  opacity: 1;
+}
+
+.tariffRadioItem > input[type="radio"]:checked + label::after {
+  content: "";
+  width: 0.8em;
+  height: 0.8em;
+  border-radius: 50%;
+  background-color: red;
+  position: absolute;
+  left: 0.35em;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.priceTitle {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 1.8rem;
+  line-height: 120%;
+  color: var(--color-main-text-dark);
+}
+
+.priceTitle span {
+  color: var(--color-accent);
+}

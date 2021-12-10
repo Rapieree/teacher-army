@@ -24,3 +24,15 @@
   left: 0;
   z-index: -1;
 }
+
+.whoNeeds > div {
+  grid-template-columns: 1fr 1fr;
+}
+
+.whoNeeds > div > div:first-child {
+  margin-bottom: 30px;
+  padding-top: 30px;
+  grid-row: 1;
+  grid-column: 1 / -1;;
+  text-align: center;
+}

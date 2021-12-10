@@ -1,15 +1,22 @@
 import logoStyle from "./logo.module.css";
 import Image from "next/image";
 import Link from "next/link";
+import {LogoType} from "../../utils/const";
 
-const Logo = ({light, className}) => {
+const logoSrc = {
+  [LogoType.LIGHT]: `/images/logo/teacher-army-logo-white.svg`,
+  [LogoType.DARK]: `/images/logo/teacher-army-logo-black.svg`,
+  [LogoType.VIOLET]: `/images/logo/teacher-army-logo-violet.svg`,
+};
+
+const Logo = ({type = LogoType.DARK, className}) => {
   return (
-    <div className={`${light ? `${logoStyle.logo} ${logoStyle.light}` : logoStyle.logo} ${className}`}>
+    <div className={`${logoStyle.logo} ${className}`}>
       <Link href="/">
         <a>
           <div className={logoStyle.image}>
             <Image
-              src="/images/logo/teacher-army-logo-white.svg"
+              src={logoSrc[type]}
               alt="logo image"
               quality={100}
               layout="fill"
