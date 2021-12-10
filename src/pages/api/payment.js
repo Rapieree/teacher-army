@@ -7,7 +7,9 @@ import {Payment} from "../../models/payment";
 const KEY = process.env.KEY_MAGAZINE;
 
 const handler = async (req, res) => {
+  // eslint-disable-next-line no-console
   console.log(req);
+  // eslint-disable-next-line no-console
   console.log(req.query);
 
   if (req.method === `GET`) {
@@ -48,21 +50,26 @@ const handler = async (req, res) => {
 
           payment.save();
           res.status(StatusCode.SUCCESS).send(`SUCCESS`);
+          // eslint-disable-next-line no-console
           console.log(`ALL OK: BD, SIGNATURES`);
         } else {
           res.status(StatusCode.OVERLOAD_SERVER).send(`FAIL`);
+          // eslint-disable-next-line no-console
           console.log(`SIGNATURES VALIDATE ERROR: hashGet: ${MNT_SIGNATURE}, controlHash: ${controlHash}`);
         }
       } catch (err) {
+        // eslint-disable-next-line no-console
         console.log(`BD ERROR: ${err}`);
         res.status(StatusCode.OVERLOAD_SERVER).send(`FAIL`);
       }
     } else {
       res.status(StatusCode.SUCCESS).send(`OK`);
+      // eslint-disable-next-line no-console
       console.log(`Get verify request?`);
     }
   } else {
     req.status(StatusCode.SUCCESS).send(`OK`);
+    // eslint-disable-next-line no-console
     console.log(`Request no method GET`);
   }
 };
