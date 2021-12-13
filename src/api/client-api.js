@@ -1,5 +1,3 @@
-import {CLIENT_END_POINT} from "../utils/const";
-
 const throwHttpError = (errorMessage) => {
   const httpError = new Error();
   httpError.message = errorMessage;
@@ -8,7 +6,7 @@ const throwHttpError = (errorMessage) => {
 };
 
 export const sendFeedback = async ({name, contacts, message}) => {
-  const response = await fetch(`${CLIENT_END_POINT}/api/subscribe`, {
+  const response = await fetch(`/api/subscribe`, {
     body: JSON.stringify({
       name,
       contacts,

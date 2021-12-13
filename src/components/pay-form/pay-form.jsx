@@ -1,5 +1,4 @@
 import {useState} from "react";
-import {CLIENT_END_POINT} from "../../utils/const";
 import CustomButton from "../custom-button/custom-button";
 import CustomInput from "../custom-input/custom-input";
 import CustomLabel from "../custom-label/custom-label";
@@ -15,13 +14,19 @@ const PayForm = ({className, getCurrentTariff, payTariffs}) => {
     getCurrentTariff(tariff);
   };
 
+  const onEmailFocus = () => {
+    const payField = document.querySelector(`#pay-success-url`);
+    if (payField.value !== window.location.origin) {
+      payField.value = window.location.origin;
+    }
+  };
 
   return (
     <div className={`${payFormStyle.payForm} ${className}`}>
       <form name="payanyway_from" id="payanyway_from" action="https://moneta.ru/assistant.htm" method="post" onSubmit={(evt) => evt.target.reset()}>
         <div className={payFormStyle.block}>
           <CustomLabel htmlFor="email-field">Почта: </CustomLabel>
-          <CustomInput type="text" id="email-field" placeholder="Ivan@gmail.com" onChange={(evt) => setEmail(evt.target.value)} required/>
+          <CustomInput type="text" id="email-field" placeholder="Ivan@gmail.com" onChange={(evt) => setEmail(evt.target.value)} onFocus={onEmailFocus} required/>
         </div>
         <div className={payFormStyle.block}>
           <CustomLabel htmlFor="tel-field">Телефон: </CustomLabel>
@@ -65,7 +70,7 @@ const PayForm = ({className, getCurrentTariff, payTariffs}) => {
           name="MNT_DESCRIPTION"
           defaultValue={`${currentTariff.description} Данные плательщика: email: ${email}; Телефон: ${phone}.`}
         />
-        <input type="hidden" name="MNT_SUCCESS_URL" defaultValue={`${CLIENT_END_POINT}/about`} />
+        <input type="hidden" id="pay-success-url" name="MNT_SUCCESS_URL" />
       </form>
     </div>
   );
